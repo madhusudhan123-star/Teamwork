@@ -14,11 +14,21 @@ module.exports = {
         spinStar: {
           'from': { transform: 'rotate(0deg)' },
           'to': { transform: 'rotate(360deg)' }
+        },
+        slideLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' }
+        },
+        slideRight: {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' }
         }
       },
       animation: {
-        'scroll': 'scroll 20s linear infinite',
-        'star-spin': 'spinStar 3s linear infinite'
+        'scroll': 'scroll 10s linear infinite',
+        'star-spin': 'spinStar 1s linear infinite',
+        'slideLeft': 'slideLeft 30s linear infinite',
+        'slideRight': 'slideRight 30s linear infinite'
       },
       fontFamily: {
         'bilbo-swash-caps': ['"Bilbo Swash Caps"', 'cursive'],
