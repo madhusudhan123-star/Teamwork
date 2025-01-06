@@ -270,7 +270,7 @@ const HeroSection = () => {
         setIsMouseInSection(true);
     };
 
-    const handleMouseLeave = () => {
+    const handleMouseLeaves = () => {
         setIsScrollingEnabled(false);
         setIsMouseInSection(false);
     };
@@ -450,7 +450,7 @@ const HeroSection = () => {
 
                         </div>
                     </div>
-                    <div onmouseover className='w-full md:w-[50vw] h-[50vh] md:h-screen overflow-hidden relative'>
+                    <div className='w-full md:w-[50vw] h-[50vh] md:h-screen overflow-hidden relative'>
                         {slides.map((slide, index) => (
                             <div
                                 key={index}
@@ -473,7 +473,7 @@ const HeroSection = () => {
             </section>
 
             {/* Show the services */}
-            <section ref={horizontalScrollRef} className='h-full w-full' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <section className='h-full w-full'>
                 {/* Mobile View */}
                 <div className='md:hidden flex flex-col gap-8 px-4 py-10'>
                     {data.Home.services.content.map((service, index) => (
@@ -504,7 +504,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Desktop View */}
-                <div ref={horizontalScrollRef} className='hidden md:flex h-[100vh] w-full flex items-center overflow-x-auto scrollbar-hide [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                <div ref={horizontalScrollRef} className='hidden md:flex h-[100vh] w-full flex items-center overflow-x-auto scrollbar-hide [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeaves}>
                     {data.Home.services.content.map((service, index) => (
                         <div
                             key={index}
@@ -675,7 +675,7 @@ const HeroSection = () => {
             </section>
             
             {/* Footer section */}
-            <section ref={footerRef} className={`fixed bottom-0 left-0 w-full bg-black text-white transition-transform duration-1000 ease-in-out ${ isScrolled ? 'translate-y-0' : 'translate-y-full'}`} style={{ zIndex: 30, height: '90vh', '@media (min-width: 768px)': { height: '70vh'}}}>
+            <section ref={footerRef} className={`fixed bottom-0 left-0 w-full bg-black text-white transition-transform duration-1000 ease-in-out ${ isScrolled ? 'translate-y-0' : 'translate-y-full'}`} style={{ zIndex: 30, height: '90vh', minWidth: '768px' }}>
                 <div className='bg-white text-black p-10 flex justify-around items-center flex-wrap border-white border-8 borer-solid rounded-b-3xl'>
                     <p className='p-4 border-black border-2 border-solid rounded-full'>India: 2 39PM</p>
                     <p className='p-4 border-black border-2 border-solid rounded-full'>India: 2 39PM</p>
