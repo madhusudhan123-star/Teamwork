@@ -49,10 +49,10 @@ const data = {
         logo: logo,
         drop: drop,
         navbarItems: {
-            work: "work",
+            work: "Home",
             work_link: "#",
             solutions: {
-                title: "solutions",
+                title: "About Us",
                 items: {
                     brand: "Brand Solutions",
                     brand_link: "#",
@@ -67,7 +67,7 @@ const data = {
                 }
             },
             about: {
-                title: "About",
+                title: "Solutions",
                 items: {
                     how: "How We Work",
                     how_link: "#",
@@ -88,7 +88,7 @@ const data = {
                 }
             },
             resource: {
-                title: "Resources",
+                title: "Blogs ",
                 items: {
                     blog: "Blog",
                     blog_link: "#",
@@ -100,8 +100,8 @@ const data = {
                     img2_link: "#",
                 }
             },
-            careers: "Careers",
-            careers_link: "#",
+            // careers: "Careers",
+            // careers_link: "#",
             contact: "Contact Us",
             contact_link: "#",
             contact_img: "→",
@@ -109,16 +109,16 @@ const data = {
     },
     Home: {
         Headersection: {
-            title: "Your Creative, Media & Technology Transformation Partner",
-            subtitle: "We're a team of 1000+ Specialists delivering award-winning work for 300+ brands worldwide, 8 years and counting!",
+            title: "Ready to boost your brand through digital marketing",
+            // subtitle: "We're a team of 1000+ Specialists delivering award-winning work for 300+ brands worldwide, 8 years and counting!",
             star: stars,
-            textrotate: "It's time to create a Schbang",
+            textrotate: "It's time to create a Teamworks Digital Strategy that works for you!",
         },
         secondsec: {
-            title: "What defines us",
+            title: "How we do",
             sec_bg: se_bg,
-            sectitle: "We’re brand builders at heart, creators by design, tech enthusiasts in practice, and integrated at our core.",
-            subtitle: "We're on a mission to take the very best of Indian creative talent to the world. Driven by a ferocious hunger to create tangible impact for your business, we work with in-house specialists, industry partners and technology leaders to push the boundaries of creativity and put your brand on the global stage.",
+            // sectitle: "We’re brand builders at heart, creators by design, tech enthusiasts in practice, and integrated at our core.",
+            subtitle: "We create customized digital strategies to grow your business.With 20 years of expertise in storytelling, we have honed the craft of storytelling across various mediums—whether through TVCs, digital ads & Corporate films —knowing that a well-told narrative can cut through the noise and create emotional engagement. A brand’s story isn't just about its product; it’s about the values, emotions, and experiences that resonate with the audience. In today’s digital-first world, storytelling involves creating moments that audiences can relate to and feel invested in.",
             button: "Dive Into Our Culture"
         },
         thirdsec: {
@@ -133,25 +133,25 @@ const data = {
             bgColors: ['#FE6427', '#FDE325', '#EFB9E2', '#01D5F2', '#43EF18'],
             content: [
                 {
-                    title: "Brand Solution",
-                    description: "Our Strategists, Designers, Video Editors and Animators provide you with holistic solutions to grow your digital presence and achieve your business goals through both day-to-day content and integrated flagship campaigns."
+                    title: "Team Works Creative",
+                    description: "We convey your brand promise to the audience on an emotional level, bringing your dreams to life and leaving a lasting impression.Transforming  your narrative that resonates with your audience, making them an indispensable tool in your marketing arsenal.Get an ultimate communication tool for selling the unbuilt, transforming concepts into tangible experiences through stunning, captivating visuals."
                 },
                 {
-                    title: "Tech Solution",
-                    description: "Our tech experts deliver cutting-edge solutions that transform your digital presence, from web development to app creation, ensuring your brand stays ahead in the digital landscape."
+                    title: "Team Works Production House",
+                    description: "We offer a wide range of corporate video production services tailored to meet your specific video requirements. Two decades of experience in video production ,we seamlessly integrate high-quality professional videos into your marketing strategy. Going beyond expectations, we provide comprehensive services including video production, editing, and creative marketing strategies."
                 },
                 {
-                    title: "Media Solution",
-                    description: "Strategic media planning and execution that puts your brand in front of the right audience at the right time, maximizing your reach and engagement across all platforms."
+                    title: " Teamworks Digital ",
+                    description: "Ready to elevate your digital brand?  learn how our comprehensive digital marketing services can help your business thrive in the online landscape. Partner with us for strategic guidance, operational excellence, and a dedicated team that’s invested in your success."
                 },
                 {
-                    title: "Creative Solution",
-                    description: "Innovative creative strategies that tell your brand story in compelling ways, combining artistic excellence with strategic thinking to create memorable brand experiences."
+                    title: "PR Strategies",
+                    description: "PR strategies focus on creating a positive narrative around the brand, with media relations, influencer collaborations, and thought leadership to enhance visibility and credibility. Events serve as  platforms to engage stakeholders, showcase products or services, and build community connections. From press conferences to product launches to experiential activations and community initiatives, well-executed PR events create memorable experiences that resonate with target audiences. By combining strategic planning, impactful storytelling, and meticulous execution, PR strategies and events help brands establish trust, generate buzz, and achieve long-term success."
                 },
-                {
-                    title: "Digital Solution",
-                    description: "Comprehensive digital transformation solutions that enhance your online presence, from social media management to digital marketing campaigns that drive real results."
-                }
+                // {
+                //     title: "Digital Solution",
+                //     description: "Comprehensive digital transformation solutions that enhance your online presence, from social media management to digital marketing campaigns that drive real results."
+                // }
             ]
         },
         brand: {
@@ -210,14 +210,14 @@ const data = {
         ],
         footer: {
             logo: footer,
-            title: "Schbang Digital Solutions Pvt. Ltd.",
+            title: "TeamWorks Solutions Pvt. Ltd.",
             subtitle: "A-101, 1st Floor, Everest Grande, Mahakali Caves Road, Andheri (E), Mumbai - 400093",
             email: "info@schbang",
-            socialIcons:[
+            socialIcons: [
                 facebook,
                 youtube,
                 linkedin,
-                instagram,   
+                instagram,
             ]
         }
     }
