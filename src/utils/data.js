@@ -502,10 +502,10 @@ const data = {
         ],
         officeLocations: [
             {
-                city: "Mumbai",
+                city: "Hyderabad",
                 image: office1,
-                address: "A-101, 1st Floor, Everest Grande, Mahakali Caves Road, Andheri (E), Mumbai - 400093",
-                email: "mumbai@teamworksdigital.com"
+                address: "3rd Floor, Godha Horizon, Kavuri Hills, Madhapur, Hyderabad, Telangana 500081",
+                email: "info@eteamworks.com"
             },
             {
                 city: "Bangalore",
