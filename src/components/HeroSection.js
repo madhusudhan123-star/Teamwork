@@ -395,30 +395,6 @@ const HeroSection = () => {
                             />
                         </div>
                     ))}
-                    {/* Mobile Navigation Button */}
-                    {/* <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-4 z-20'>
-                        <div 
-                            onMouseOver={() => setCursorset(true)} 
-                            onMouseLeave={() => setCursorset(false)} 
-                            className='relative overflow-hidden bg-white rounded-full h-14 w-14 flex items-center justify-center' 
-                            onClick={() => handleSlideChange('next')}
-                        >
-                            <img 
-                                src={data.Home.thirdsec.arrow} 
-                                className={`w-full relative transition-all duration-300 ease-in-out ${
-                                    cursorset ? "left-[46px]" : "left-[0px]"
-                                }`} 
-                                alt="arrow" 
-                            />
-                            <img 
-                                src={data.Home.thirdsec.arrow} 
-                                className={`w-full absolute transition-all duration-300 ease-in-out ${
-                                    cursorset ? "left-[0px] delay-300" : "left-[-46px]"
-                                }`} 
-                                alt="arrow" 
-                            />
-                        </div>
-                    </div> */}
                 </div>
 
                 {/* Desktop View - Double Slider */}
@@ -524,7 +500,7 @@ const HeroSection = () => {
                                 e.currentTarget.style.setProperty(`--bg-color-${index}`, 'transparent');
                             }}
                         >
-                            <h1 className='text-6xl text-center font-bold text-gray-100 group-hover:text-white transition-colors duration-500'>
+                            <h1 className='text-[3vw] text-center font-bold text-gray-100 group-hover:text-white transition-colors duration-500'>
                                 {service.title.split(' ').map((word, i) => (
                                     <React.Fragment key={i}>
                                         {word} {i === 0 && <br />}
@@ -588,8 +564,8 @@ const HeroSection = () => {
             </section>
 
             {/* Trending topic */}
-            <section>
-                <div className='flex flex-col md:flex-row mx-4 md:mx-16 mt-20 md:mt-40'
+            <section className="relative bg-white mb-20"> {/* Added mb-20 */}
+                <div className='flex flex-col md:flex-row mx-4 md:mx-16 mt-20 md:mt-40 pb-10'
                     onMouseLeave={() => setHoveredTrending(null)}>
                     <div className='w-full md:w-3/5 mb-10 md:mb-0 '>
                         <h1 className='text-2xl md:text-3xl font-bold mb-6 md:mb-10'>{data.Home.trending.title}</h1>
@@ -673,140 +649,8 @@ const HeroSection = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Footer section */}
-            <section ref={footerRef} className={`fixed bottom-0 left-0 w-full bg-black text-white transition-transform duration-1000 ease-in-out ${isScrolled ? 'translate-y-0' : 'translate-y-full'}`} style={{ zIndex: 30, height: '90vh', minWidth: '768px' }}>
-                <div className='bg-white text-black p-10 flex justify-around items-center flex-wrap border-white border-8 borer-solid rounded-b-3xl'>
-                    <p className='p-4 border-black border-2 border-solid rounded-full'>India: 2 39PM</p>
-                    <p className='p-4 border-black border-2 border-solid rounded-full'>India: 2 39PM</p>
-                    <p className='p-4 border-black border-2 border-solid rounded-full'>India: 2 39PM</p>
-                    <p className='p-4 border-black border-2 border-solid rounded-full'>India: 2 39PM</p>
-                </div>
-
-                <div className='container mx-auto px-4 md:px-6 py-10 md:py-20'>
-                    <div className='flex justify-center items-center mb-10 md:mb-20'>
-                        <img src={data.Home.footer.logo} className='w-full md:w-auto max-w-[80%] md:max-w-screen-lg' alt="footer logo" />
-                    </div>
-
-                    {/* Bottom section */}
-                    <div className='mt-10 md:mt-20 border-t border-gray-800 pt-6 md:pt-8 flex flex-col md:flex-row gap-6 md:gap-0 justify-between items-center'>
-                        <div className='flex space-x-4 md:space-x-6'>
-                            {data.Home.footer.socialIcons.map((platform, link) => (
-                                <a
-                                    key={platform}
-                                    href={link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className='text-gray-400 hover:text-white transition-colors duration-300'
-                                >
-                                    <img src={platform} />
-                                </a>
-                            ))}
-                        </div>
-                        <div className='text-xs md:text-sm text-gray-400 text-center md:text-left'>
-                            © 2024 {data.Home.footer.title}
-                        </div>
-                        <div className='flex flex-wrap md:flex-nowrap justify-center gap-4 md:space-x-6'>
-                            <span className='text-xs md:text-sm text-gray-400 hover:text-white cursor-pointer'>About Us</span>
-                            <span className='text-xs md:text-sm text-gray-400 hover:text-white cursor-pointer'>Contact</span>
-                            <span className='text-xs md:text-sm text-gray-400 hover:text-white cursor-pointer'>Privacy</span>
-                            <span className='text-xs md:text-sm text-gray-400 hover:text-white cursor-pointer'>Policy</span>
-                            <span className='text-xs md:text-sm text-gray-400 hover:text-white cursor-pointer'>Blog</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-                {/* // Partner section - now overlaps footer */}
-    <section className="relative z-0 mb-40 mt-40 bg-transparent overflow-hidden">
-        <div className='w-full h-[40vh] md:h-[30vh] bg-gradient-to-r from-white to-transparent relative'>
-            {/* Left interactive area */}
-            {/* <div className='hidden md:block'>
-                <div
-                    className='w-1/4 z-10 h-full absolute top-0 left-0 bg-gradient-to-r from-white to-transparent cursor-w-resize'
-                    onClick={() => handlePartnerSlide('left')}
-                >
-                </div>
-                <div
-                    className='w-1/4 z-10 h-full absolute top-0 right-0 bg-gradient-to-l from-white to-transparent cursor-e-resize'
-                    onClick={() => handlePartnerSlide('right')}
-                >
-                </div>
-            </div> */}
-    
-        </div>
-        <div className='bg-white text-black p-10 flex justify-around items-center flex-wrap border-white border-8 borer-solid rounded-b-3xl'>
-            <p className='p-4 border-black border-2 border-solid rounded-full'>India: 2 39PM</p>
-            <p className='p-4 border-black border-2 border-solid rounded-full'>India: 2 39PM</p>
-            <p className='p-4 border-black border-2 border-solid rounded-full'>India: 2 39PM</p>
-            <p className='p-4 border-black border-2 border-solid rounded-full'>India: 2 39PM</p>
-        </div>
-    </section>
         </div>
     )
 }
 
 export default HeroSection
-            // <div className='flex flex-col md:flex-row justify-between items-center px-4 bg-white/80 backdrop-blur-sm'>
-            //     <div
-            //         id="partner-slider"
-            //         className='overflow-hidden scroll-smooth grayscale flex items-center w-full'
-            //         style={{
-            //             transform: `translateX(${slidePosition}px)`,
-            //             transition: isAnimating ? 'transform 0.5s ease-in-out' : 'none'
-            //         }}
-            //         onTouchStart={handleTouchStart}
-            //         onTouchMove={handleTouchMove}
-            //         onTouchEnd={handleTouchEnd}
-            //     >
-            //         {/* Original set */}
-            //         {data.Home.partner.map((partner, index) => (
-            //             <div
-            //                 key={index}
-            //                 className={`${isMobileView
-            //                         ? 'w-full min-w-full px-4'
-            //                         : 'w-1/4 min-w-[25%]'
-            //                     } h-full flex flex-col items-center justify-center`}
-            //             >
-            //                 <img
-            //                     src={partner.image}
-            //                     className='w-1/3 grayscale mb-10'
-            //                     alt="partner logo"
-            //                 />
-            //                 <div className='text-center'>
-            //                     <h1 className='text-lg font-bold text-black'>{partner.title}</h1>
-            //                     <div className='flex justify-center'>
-            //                         <p className='text-md text-center text-gray-600 w-full md:w-1/2 px-4 md:px-0'>
-            //                             {partner.subtitle}
-            //                         </p>
-            //                     </div>
-            //                 </div>
-            //             </div>
-            //         ))}
-            //         {/* Duplicate set */}
-            //         {/* {data.Home.partner.map((partner, index) => (
-            //             <div 
-            //                 key={`dup-${index}`} 
-            //                 className={`${
-            //                     isMobileView 
-            //                         ? 'w-full min-w-full px-4' 
-            //                         : 'w-1/4 min-w-[25%]'
-            //                 } h-full flex flex-col items-center justify-center`}
-            //             >
-            //                 <img 
-            //                     src={partner.image} 
-            //                     className='w-1/3 grayscale mb-10' 
-            //                     alt="partner logo" 
-            //                 />
-            //                 <div className='text-center'>
-            //                     <h1 className='text-lg font-bold text-black'>{partner.title}</h1>
-            //                     <div className='flex justify-center'>
-            //                         <p className='text-md text-center text-gray-600 w-full md:w-1/2 px-4 md:px-0'>
-            //                             {partner.subtitle}
-            //                         </p>
-            //                     </div>
-            //                 </div>
-            //             </div>
-            //         ))} */}
-            //     </div>
-            // </div>
