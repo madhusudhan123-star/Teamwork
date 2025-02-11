@@ -13,20 +13,20 @@ import stars from '../assets/Home/star.png';
 import se_bg from '../assets/Home/sec_bg.png';
 import demo from '../assets/Home/demo.webp';
 import arrow from '../assets/Home/arrow.png';
-import trending from '../assets/Home/trending_img1.png';
-import trending2 from '../assets/Home/trending_img2.png';
-import trending3 from '../assets/Home/trending_img3.webp';
+import trending from '../assets/Home/trending_img1.jpeg';
+import trending2 from '../assets/Home/trending_img2.jpeg';
+import trending3 from '../assets/Home/trending_img3.jpeg';
 import footer from '../assets/Home/footer_logo.png';
 //  Brands Logo
-import brand1 from '../assets/Home/brand/1.webp';
-import brand2 from '../assets/Home/brand/2.webp';
-import brand3 from '../assets/Home/brand/3.webp';
-import brand4 from '../assets/Home/brand/4.webp';
-import brand5 from '../assets/Home/brand/5.webp';
-import brand6 from '../assets/Home/brand/6.webp';
-import brand7 from '../assets/Home/brand/7.webp';
-import brand8 from '../assets/Home/brand/8.webp';
-import brand9 from '../assets/Home/brand/9.webp';
+import brand1 from '../assets/Home/brand/1.jpg';
+import brand2 from '../assets/Home/brand/2.jpg';
+import brand3 from '../assets/Home/brand/3.jpg';
+import brand4 from '../assets/Home/brand/4.jpg';
+import brand5 from '../assets/Home/brand/5.jpg';
+import brand6 from '../assets/Home/brand/6.jpg';
+import brand7 from '../assets/Home/brand/7.jpg';
+import brand8 from '../assets/Home/brand/8.jpg';
+import brand9 from '../assets/Home/brand/9.jpg';
 // Partner
 import partner1 from '../assets/Home/partner/partner1.png';
 import partner2 from '../assets/Home/partner/partner2.png';
@@ -58,6 +58,10 @@ import blog5 from '../assets/blog/blog5.png';
 import blog6 from '../assets/blog/blog6.png';
 import blog7 from '../assets/blog/blog7.png';
 import blog8 from '../assets/blog/blog8.png';
+
+
+// Solution Page Image
+// import 1 from '../assets/solution/';
 
 // Contact page images
 import contact1 from '../assets/contact/contact1.webp';
@@ -348,7 +352,8 @@ const data = {
                     "Local SEO",
                     "Technical SEO",
                     "SEO Reporting & Analytics"
-                ]
+                ],
+                img: sol_img1
             },
             {
                 title: "Pay-Per-Click Advertising (PPC)",

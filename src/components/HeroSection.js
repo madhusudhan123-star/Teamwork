@@ -3,6 +3,7 @@ import data from '../utils/data'
 import { useParallax } from 'react-scroll-parallax';
 import Link from 'react-ripples-hover';
 import { useInView } from 'react-intersection-observer';
+import video from '../assets/Home/video.mp4';
 
 const HeroSection = () => {
     const [animcount, setAnimcount] = useState(5);
@@ -296,35 +297,24 @@ const HeroSection = () => {
                                     <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
                                 </div>
                             ))}
-                            {/* Duplicate set for seamless loop */}
-                            {Array.from({ length: animcount }).map((_, index) => (
-                                <div key={`first-${index}`} className='flex items-center shrink-0'>
-                                    <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
-                                    <h1 className="outlined-text text-3xl font-bold uppercase">
-                                        {data.Home.Headersection.textrotate}
-                                    </h1>
-                                    <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                {/* Video container with parallax */}
-                <div ref={videoParallax.ref} className='relative top-[-140px] z-10 w-screen h-screen overflow-hidden transition-transform duration-300'>
-                    <iframe
-                        src="https://player.vimeo.com/video/1009850695?h=0ef5fe8a95&autoplay=1&loop=1&muted=1&controls=0"
-                        frameBorder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowFullScreen
-                        title="Hero Section Video"
-                        className='absolute top-0 left-0 w-full h-full object-cover'
-                    />
-                </div>
+                                            {/* Video container */}
+                                            <div ref={videoParallax.ref} className='relative top-[-130px] z-10 w-screen h-screen overflow-hidden transition-transform duration-300'>
+                                                <video
+                                                    src={video}
+                                                    autoPlay
+                                                    loop
+                                                    muted
+                                                    className='absolute top-0 left-0 w-full h-full object-cover'
+                                                />
+                                            </div>
 
-            </section>
+                                        </section>
 
-            {/* Second Section */}
+                                        {/* Second Section */}
             <section className='relative'>
                 {/* Background_image */}
                 <div ref={background_move.ref} className='bg-white hidden 2xl:flex xl:flex md:flex sm:hidden absolute top-0 w-screen h-screen items-center justify-center'>
