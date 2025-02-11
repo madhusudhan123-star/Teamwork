@@ -12,11 +12,20 @@ import drop from '../assets/navbar/drop.svg';
 import stars from '../assets/Home/star.png';
 import se_bg from '../assets/Home/sec_bg.png';
 import demo from '../assets/Home/demo.webp';
+import onel from '../assets/Home/onel.jpg';
+import oner from '../assets/Home/oner.jpg';
+import twol from '../assets/Home/twol.jpg';
+import twor from '../assets/Home/twor.jpg';
+import threel from '../assets/Home/threel.jpg';
+import threer from '../assets/Home/threer.jpg';
+import onesli from '../assets/Home/one.jpg';
+import twosli from '../assets/Home/two.jpg';
+import threesli from '../assets/Home/three.jpg';
 import arrow from '../assets/Home/arrow.png';
 import trending from '../assets/Home/trending_img1.jpeg';
 import trending2 from '../assets/Home/trending_img2.jpeg';
 import trending3 from '../assets/Home/trending_img3.jpeg';
-import footer from '../assets/Home/footer_logo.png';
+import footer from '../assets/Home/footer_logo.jpg';
 //  Brands Logo
 import brand1 from '../assets/Home/brand/1.jpg';
 import brand2 from '../assets/Home/brand/2.jpg';
@@ -61,7 +70,22 @@ import blog8 from '../assets/blog/blog8.png';
 
 
 // Solution Page Image
-// import 1 from '../assets/solution/';
+import pay from '../assets/solution/payperclick.jpg';
+import social from '../assets/solution/socialmediamarketing.jpg';
+import content from '../assets/solution/contentmarketing.jpg';
+import web from '../assets/solution/web.jpeg';
+import email from '../assets/solution/emailmarketing.jpg';
+import film from '../assets/solution/Filmproduction.jpg';
+import camp from '../assets/solution/camapinplanning.jpg';
+import one from '../assets/solution/one.jpg';
+import two from '../assets/solution/two.jpg';
+import three from '../assets/solution/three.jpg';
+import four from '../assets/solution/four.jpg';
+import five from '../assets/solution/five.jpg';
+import six from '../assets/solution/six.jpg';
+import seven from '../assets/solution/seven.jpg';
+import eight from '../assets/solution/eight.jpg';
+
 
 // Contact page images
 import contact1 from '../assets/contact/contact1.webp';
@@ -116,12 +140,18 @@ const data = {
             button: "Dive Into Our Culture"
         },
         thirdsec: {
-            image1: demo,
-            image2: demo,
+            imagel1: onel,
+            imager1: oner,
+            imagel2: twol,
+            imager2: twor,
+            imagel3: threel,
+            imager3: threer,
+            
+
             arrow: arrow,
-            mobileImage1: demo, // Import these new images
-            mobileImage2: demo,
-            mobileImage3: demo,
+            mobileImage1: onesli, // Import these new images
+            mobileImage2: twosli,
+            mobileImage3: threesli,
         },
         services: {
             bgColors: ['#FE6427', '#FDE325', '#EFB9E2', '#01D5F2', '#43EF18'],
@@ -352,8 +382,7 @@ const data = {
                     "Local SEO",
                     "Technical SEO",
                     "SEO Reporting & Analytics"
-                ],
-                img: sol_img1
+                ]
             },
             {
                 title: "Pay-Per-Click Advertising (PPC)",
@@ -364,7 +393,8 @@ const data = {
                     "Display & Retargeting Ads",
                     "Conversion Tracking & Analytics",
                     "A/B Testing & Ad Optimization"
-                ]
+                ],
+                img:pay
             },
             {
                 title: "Social Media Marketing",
@@ -375,7 +405,8 @@ const data = {
                     "Social Media Management & Monitoring",
                     "Paid Social Campaigns",
                     "Influencer Marketing"
-                ]
+                ],
+                img: social,
             },
             {
                 title: "Content Marketing",
@@ -385,7 +416,8 @@ const data = {
                     "Infographic Design",
                     "Email Marketing Campaigns",
                     "Content Strategy & SEO Integration"
-                ]
+                ],
+                img: content,
             },
             {
                 title: "Web Design & Development",
@@ -394,8 +426,12 @@ const data = {
                     "Custom Website Design",
                     "E-commerce Solutions",
                     "WordPress Development",
-                    "Website Maintenance & Support"
-                ]
+                    "UI/UX Design & Prototyping",
+                    "Single Page Applications (SPAs)",
+                    "Progressive Web Apps (PWAs)",
+                    "Interactive & Dynamic UI"
+                ],
+                img: web,
             },
             {
                 title: "Email Marketing",
@@ -406,7 +442,8 @@ const data = {
                     "Newsletter Design & Content Creation",
                     "Segmentation & Personalization",
                     "Performance Analytics & Reporting"
-                ]
+                ],
+                img: email, 
             },
             {
                 title: "Film Production, Ads and AVs",
@@ -417,7 +454,8 @@ const data = {
                     "Product Demonstration Videos",
                     "Scriptwriting & Storyboarding",
                     "Full Video Production (Filming, Editing, Post-production)"
-                ]
+                ],
+                img: film
             },
             {
                 title: "Brand Launch & Rebranding Services",
@@ -426,7 +464,8 @@ const data = {
                     "Brand Strategy & Positioning",
                     "Brand Identity Design",
                     "Launch Campaign Development"
-                ]
+                ],
+                img: camp,
             }
         ],
         blogPosts: [
@@ -439,50 +478,50 @@ const data = {
 
                 More Value for Your Money
                 Unlike traditional advertising (think billboards or TV ads), digital marketing is cost-effective and measurable. Want to spend just money on a social media ad? Go ahead. Want to track how many people clicked, liked, or bought from that ad? You can. It's marketing that works smarter, not harder.`,
-                image: blog1,
+                image: one,
                 date: "December 24, 2023",
             },
             {
                 title: "Your Customers ",
                 content: `Think about it. What’s the first thing you do when you’re looking for a product or service? You Google it! Your customers are doing the same. Whether it’s hunting for the nearest coffee shop or comparing gadgets, their search starts online. If your business isn’t showing up, you’re invisible to a massive chunk of your audience.`,
-                image: blog2,
+                image: two,
                 date: "December 24, 2023",
             },
             {
                 title: "It’s the Megaphone Your Business Needs",
                 content: `Digital marketing amplifies your voice. Whether it’s through social media posts, search ads, or engaging blogs, it puts your brand in front of the right people at the right time. It’s like having a megaphone that says, “Hey, we’ve got what you need!`,
-                image: blog3,
+                image: three,
                 date: "December 24, 2023",
             },
             {
                 title: "More Value for Your Money",
                 content: `Unlike traditional advertising (think billboards or TV ads), digital marketing is cost-effective and measurable. Want to spend just money on a social media ad ? Go ahead. Want to track how many people clicked, liked, or bought from that ad? You can. It’s marketing that works smarter, not harder`,
-                image: blog4,
+                image: four,
                 date: "December 24, 2023",
             },
             {
                 title: "Your Competitors Are Already Winning the Race",
                 content: `Here’s the harsh truth: your competitors are already online, connecting with the audience you’re trying to reach. If you’re not in the game, you’re handing them the trophy. Digital marketing helps you not only stay in the race but gives you the tools to win it.`,
-                image: blog5,
+                image: five,
                 date: "December 24, 2023",
             },
             {
                 title: "It’s Not Just Selling – It’s Building Relationships",
                 content: `Gone are the days of hard-sell tactics. Today’s customers want brands they can connect with. Digital marketing allows you to engage directly with your audience—replying to their comments, addressing their concerns, or simply entertaining them with a clever post. It’s about creating a bond, not just making a sale.`,
-                image: blog6,
+                image: six,
                 date: "December 24, 2023",
             },
             {
                 title: "The Future is Digital—Are You Ready?",
                 content: `Trends like AI, voice search, and video content are changing how things work online. By starting digital marketing now, you’re getting your business ready to meet the needs of tomorrow’s tech-smart customers.`,
-                image: blog7,
+                image: seven,
                 date: "December 24, 2023",
             },
             {
                 title: "Conclusion: Your Business Deserves to Be Seen",
                 content: `In the end, digital marketing isn’t just about being online; it’s about being present where your audience spends their time. It’s about connecting, building trust, and growing your business in a way that aligns with today’s world.
                             So, if you're still unsure about starting, now is the time to go for it. The digital world is full of opportunities—don’t miss out on your chance to stand out`,
-                image: blog8,
+                image: eight,
                 date: "December 24, 2023",
             }
         ]

@@ -21,12 +21,15 @@ const HeroSection = () => {
     const [isMouseInSection, setIsMouseInSection] = useState(false);
     const [slidePosition, setSlidePosition] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
-    const slides = [
-        data.Home.thirdsec.image1,
-        data.Home.thirdsec.image2,
-        data.Home.thirdsec.image1,
-        data.Home.thirdsec.image2,
-        data.Home.thirdsec.image1  // Add one more to ensure smooth transition back to start
+    const slidesl = [
+        data.Home.thirdsec.imagel1,
+        data.Home.thirdsec.imagel2,
+        data.Home.thirdsec.imagel3,// Add one more to ensure smooth transition back to start
+    ];
+    const slidesr  = [
+        data.Home.thirdsec.imager1,
+        data.Home.thirdsec.imager2,
+        data.Home.thirdsec.imager3,// Add one more to ensure smooth transition back to start
     ];
     const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
     const [touchStart, setTouchStart] = useState(0);
@@ -82,7 +85,7 @@ const HeroSection = () => {
 
         const interval = setInterval(() => {
             setCurrentSlide((prev) => {
-                if (prev >= slides.length - 1) {
+                if (prev >= slidesl.length - 1) {
                     return 0;
                 }
                 return prev + 1;
@@ -254,9 +257,9 @@ const HeroSection = () => {
         // Change slide
         setCurrentSlide(prev => {
             if (direction === 'next') {
-                return prev >= slides.length - 1 ? 0 : prev + 1;
+                return prev >= slidesl.length - 1 ? 0 : prev + 1;
             } else {
-                return prev <= 0 ? slides.length - 1 : prev - 1;
+                return prev <= 0 ? slidesr.length - 1 : prev - 1;
             }
         });
 
@@ -388,9 +391,9 @@ const HeroSection = () => {
                 </div>
 
                 {/* Desktop View - Double Slider */}
-                <div className='hidden md:flex gap-10'>
+                <div className='hidden md:flex gap-2'>
                     <div className='w-full md:w-[50vw] h-[50vh] md:h-screen overflow-hidden relative'>
-                        {slides.map((slide, index) => (
+                        {slidesl.map((slide, index) => (
                             <div
                                 key={index}
                                 className={`absolute w-full h-full transition-all ease-in-out`}
@@ -417,7 +420,7 @@ const HeroSection = () => {
                         </div>
                     </div>
                     <div className='w-full md:w-[50vw] h-[50vh] md:h-screen overflow-hidden relative'>
-                        {slides.map((slide, index) => (
+                        {slidesr.map((slide, index) => (
                             <div
                                 key={index}
                                 className={`absolute w-full h-full transition-all ease-in-out`}

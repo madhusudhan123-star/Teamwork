@@ -36,20 +36,28 @@ const ServicesAccordion = () => {
                     </button>
                     <div
                         className={`overflow-hidden transition-all duration-300 ${
-                            activeIndex === index ? 'max-h-[500px]' : 'max-h-0'
+                            activeIndex === index ? 'max-h-[1000px]' : 'max-h-0'
                         }`}
                     >
                         <div className="p-6 bg-white">
                             <p className="text-gray-700 mb-4">{item.content}</p>
                             {item.bullets && (
-                                <ul className="list-disc pl-6">
+                                <ul className="list-disc pl-6 mb-4">
                                     {item.bullets.map((bullet, i) => (
                                         <li key={i} className="text-gray-700 mb-1">{bullet}</li>
                                     ))}
                                 </ul>
                             )}
+                            {item.img && (
+                                <div className="w-full overflow-hidden">
+                                    <img 
+                                        src={item.img} 
+                                        alt={item.imageAlt} 
+                                        className="w-full h-auto rounded-lg shadow-md mt-4 object-contain"
+                                    />
+                                </div>
+                            )}
                         </div>
-                        <img  />
                     </div>
                     <div className="w-full h-[1px] bg-gray-200"></div>
                 </div>
