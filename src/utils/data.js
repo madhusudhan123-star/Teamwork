@@ -146,7 +146,7 @@ const data = {
             imager2: twor,
             imagel3: threel,
             imager3: threer,
-            
+
 
             arrow: arrow,
             mobileImage1: onesli, // Import these new images
@@ -243,6 +243,11 @@ const data = {
                 linkedin,
                 instagram,
             ]
+        },
+        slider: {
+            image1: "/path/to/your/image1.jpg",
+            image2: "/path/to/your/image2.jpg",
+            image3: "/path/to/your/image3.jpg"
         }
     },
     About: {
@@ -394,7 +399,7 @@ const data = {
                     "Conversion Tracking & Analytics",
                     "A/B Testing & Ad Optimization"
                 ],
-                img:pay
+                img: pay
             },
             {
                 title: "Social Media Marketing",
@@ -443,7 +448,7 @@ const data = {
                     "Segmentation & Personalization",
                     "Performance Analytics & Reporting"
                 ],
-                img: email, 
+                img: email,
             },
             {
                 title: "Film Production, Ads and AVs",

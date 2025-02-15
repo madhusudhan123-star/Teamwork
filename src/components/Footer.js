@@ -43,9 +43,8 @@ const Footer = () => {
                         <div className='flex flex-wrap justify-center gap-4 md:gap-6 order-3'>
                             <Link to="/about" className='text-sm text-gray-400 hover:text-white transition-colors'>About Us</Link>
                             <Link to="/contact" className='text-sm text-gray-400 hover:text-white transition-colors'>Contact</Link>
-                            <Link to="/privacy" className='text-sm text-gray-400 hover:text-white transition-colors'>Privacy</Link>
-                            <Link to="/policy" className='text-sm text-gray-400 hover:text-white transition-colors'>Policy</Link>
-                            <Link to="/blogs" className='text-sm text-gray-400 hover:text-white transition-colors'>Blog</Link>
+                            <Link to="/privacy" className='text-sm text-gray-400 hover:text-white transition-colors'>Privacy Policy</Link>
+                            {/* <Link to="/blogs" className='text-sm text-gray-400 hover:text-white transition-colors'>Blog</Link> */}
                         </div>
                     </div>
                 </div>

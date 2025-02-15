@@ -4,6 +4,11 @@ import { useParallax } from 'react-scroll-parallax';
 import Link from 'react-ripples-hover';
 import { useInView } from 'react-intersection-observer';
 import video from '../assets/Home/video.mp4';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const HeroSection = () => {
     const [animcount, setAnimcount] = useState(5);
@@ -26,7 +31,7 @@ const HeroSection = () => {
         data.Home.thirdsec.imagel2,
         data.Home.thirdsec.imagel3,// Add one more to ensure smooth transition back to start
     ];
-    const slidesr  = [
+    const slidesr = [
         data.Home.thirdsec.imager1,
         data.Home.thirdsec.imager2,
         data.Home.thirdsec.imager3,// Add one more to ensure smooth transition back to start
@@ -279,6 +284,24 @@ const HeroSection = () => {
         setIsMouseInSection(false);
     };
 
+    const slides = [
+        {
+            image: data.Home.slider.image1,
+            title: "Creative Design Solutions",
+            subtitle: "Transforming ideas into visual stories"
+        },
+        {
+            image: data.Home.slider.image2,
+            title: "Digital Innovation",
+            subtitle: "Pushing boundaries in digital space"
+        },
+        {
+            image: data.Home.slider.image3,
+            title: "Brand Excellence",
+            subtitle: "Creating lasting impressions"
+        }
+    ];
+
     return (
         <div className='font-sora overflow-hidden'>
             {/* Main content container with padding for scroll space */}
@@ -300,24 +323,26 @@ const HeroSection = () => {
                                     <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
                                 </div>
                             ))}
-                                                    </div>
-                                                </div>
-                                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                            {/* Video container */}
-                                            <div ref={videoParallax.ref} className='relative top-[-130px] z-10 w-screen h-screen overflow-hidden transition-transform duration-300'>
-                                                <video
-                                                    src={video}
-                                                    autoPlay
-                                                    loop
-                                                    muted
-                                                    className='absolute top-0 left-0 w-full h-full object-cover'
-                                                />
-                                            </div>
+                {/* Video container */}
+                <div ref={videoParallax.ref} className='relative top-[-130px] z-10 w-screen h-screen overflow-hidden transition-transform duration-300'>
+                    <video
+                        src={video}
+                        autoPlay
+                        loop
+                        muted
+                        className='absolute top-0 left-0 w-full h-full object-cover'
+                    />
+                </div>
 
-                                        </section>
+            </section>
 
-                                        {/* Second Section */}
+
+
+            {/* Second Section */}
             <section className='relative'>
                 {/* Background_image */}
                 <div ref={background_move.ref} className='bg-white hidden 2xl:flex xl:flex md:flex sm:hidden absolute top-0 w-screen h-screen items-center justify-center'>
@@ -556,94 +581,131 @@ const HeroSection = () => {
                 </div>
             </section>
 
-            {/* Trending topic */}
-            <section className="relative bg-white mb-20"> {/* Added mb-20 */}
-                <div className='flex flex-col md:flex-row mx-4 md:mx-16 mt-20 md:mt-40 pb-10'
-                    onMouseLeave={() => setHoveredTrending(null)}>
-                    <div className='w-full md:w-3/5 mb-10 md:mb-0 '>
-                        <h1 className='text-2xl md:text-3xl font-bold mb-6 md:mb-10'>{data.Home.trending.title}</h1>
-                        <div className='flex flex-col gap-10'>
-                            {/* First content block */}
-                            <div
-                                className={`flex w-full justify-start flex-col items-start gap-8 md:gap-16 border-b-2 pb-10 border-black ${trendingItemClass('trending1')}`}
-                                onMouseEnter={() => setHoveredTrending('trending1')}
-                            >
-                                <p className='border-2 border-solid border-black px-2 py-1 rounded-full'>Blog</p>
-                                <div className='flex flex-col md:flex-row justify-between w-full'>
-                                    <p className='text-lg md:text-xl font-bold w-full md:w-4/5 mb-4 md:mb-0'>
-                                        The Future Trajectory of Marketing to Drive Positive Brand Growth
+            {/* New Swiper Slider Section */}
+            <section className='relative w-full h-screen'>
+                <Swiper
+                    modules={[Autoplay, Navigation, Pagination]}
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}
+                    autoplay={{
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    className='w-full h-full'
+                >
+                    {slides.map((slide, index) => (
+                        <SwiperSlide key={index}>
+                            <div className='relative w-full h-full'>
+                                <img
+                                    src={slide.image}
+                                    alt={slide.title}
+                                    className='w-full h-full object-cover'
+                                />
+                                <div className='absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white'>
+                                    <h2 className='text-4xl md:text-6xl font-bold mb-4 text-center'>
+                                        {slide.title}
+                                    </h2>
+                                    <p className='text-xl md:text-2xl text-center'>
+                                        {slide.subtitle}
                                     </p>
-                                    <img
-                                        src={data.Home.trending.image}
-                                        className='w-full h-48 object-cover rounded-lg md:hidden mb-4'
-                                        alt="trending mobile"
-                                    />
-                                    <p className='hidden md:block text-xl text-gray-600'>4 minutes</p>
                                 </div>
                             </div>
-
-                            {/* Second content block */}
-                            <div
-                                className={`flex w-full justify-start flex-col items-start gap-8 md:gap-16 border-b-2 pb-10 border-black ${trendingItemClass('trending2')}`}
-                                onMouseEnter={() => setHoveredTrending('trending2')}
-                            >
-                                <p className='border-2 border-solid border-black px-2 py-1 rounded-full'>Press Release</p>
-                                <div className='flex flex-col md:flex-row justify-between w-full'>
-                                    <p className='text-lg md:text-xl font-bold w-full md:w-4/5 mb-4 md:mb-0'>
-                                        Schbang, India's Largest Independent Agency, Cements Its Status as a Global Challenger...
-                                    </p>
-                                    <img
-                                        src={data.Home.trending.image2}
-                                        className='w-full h-48 object-cover rounded-lg md:hidden mb-4'
-                                        alt="trending mobile"
-                                    />
-                                    <p className='hidden md:block text-xl text-gray-600'>2 minutes</p>
-                                </div>
-                            </div>
-
-                            {/* Third content block */}
-                            <div
-                                className={`flex w-full justify-start flex-col items-start gap-8 md:gap-16 border-b-2 pb-10 border-black ${trendingItemClass('trending3')}`}
-                                onMouseEnter={() => setHoveredTrending('trending3')}
-                            >
-                                <p className='border-2 border-solid border-black px-2 py-1 rounded-full'>Press Release</p>
-                                <div className='flex flex-col md:flex-row justify-between w-full'>
-                                    <p className='text-lg md:text-xl font-bold w-full md:w-4/5 mb-4 md:mb-0'>
-                                        Dabur Chyawanprash's 'Anti-Medicine Campaign' Returns with a Festive Twist
-                                    </p>
-                                    <img
-                                        src={data.Home.trending.image3}
-                                        className='w-full h-48 object-cover rounded-lg md:hidden mb-4'
-                                        alt="trending mobile"
-                                    />
-                                    <p className='hidden md:block text-xl text-gray-600'>2 minutes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Desktop images - hidden on mobile */}
-                    <div className='hidden md:flex w-2/5 h-[300px] md:h-auto relative h-full justify-center items-center'>
-                        <img
-                            src={data.Home.trending.image}
-                            className={`w-3/4 rounded-lg absolute transition-opacity duration-300 ${hoveredTrending === 'trending1' ? 'opacity-100' : 'opacity-0'}`}
-                            alt="trending"
-                        />
-                        <img
-                            src={data.Home.trending.image2}
-                            className={`w-3/4 rounded-lg absolute transition-opacity duration-300 ${hoveredTrending === 'trending2' ? 'opacity-100' : 'opacity-0'}`}
-                            alt="trending"
-                        />
-                        <img
-                            src={data.Home.trending.image3}
-                            className={`w-3/4 rounded-lg absolute transition-opacity duration-300 ${hoveredTrending === 'trending3' ? 'opacity-100' : 'opacity-0'}`}
-                            alt="trending"
-                        />
-                    </div>
-                </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </section>
         </div>
     )
 }
 
 export default HeroSection
+
+// {/* Trending topic */}
+// <section className="relative bg-white mb-20"> {/* Added mb-20 */}
+//     <div className='flex flex-col md:flex-row mx-4 md:mx-16 mt-20 md:mt-40 pb-10'
+//         onMouseLeave={() => setHoveredTrending(null)}>
+//         <div className='w-full md:w-3/5 mb-10 md:mb-0 '>
+//             <h1 className='text-2xl md:text-3xl font-bold mb-6 md:mb-10'>{data.Home.trending.title}</h1>
+//             <div className='flex flex-col gap-10'>
+//                 {/* First content block */}
+//                 <div
+//                     className={`flex w-full justify-start flex-col items-start gap-8 md:gap-16 border-b-2 pb-10 border-black ${trendingItemClass('trending1')}`}
+//                     onMouseEnter={() => setHoveredTrending('trending1')}
+//                 >
+//                     <p className='border-2 border-solid border-black px-2 py-1 rounded-full'>Blog</p>
+//                     <div className='flex flex-col md:flex-row justify-between w-full'>
+//                         <p className='text-lg md:text-xl font-bold w-full md:w-4/5 mb-4 md:mb-0'>
+//                             The Future Trajectory of Marketing to Drive Positive Brand Growth
+//                         </p>
+//                         <img
+//                             src={data.Home.trending.image}
+//                             className='w-full h-48 object-cover rounded-lg md:hidden mb-4'
+//                             alt="trending mobile"
+//                         />
+//                         <p className='hidden md:block text-xl text-gray-600'>4 minutes</p>
+//                     </div>
+//                 </div>
+
+//                 {/* Second content block */}
+//                 <div
+//                     className={`flex w-full justify-start flex-col items-start gap-8 md:gap-16 border-b-2 pb-10 border-black ${trendingItemClass('trending2')}`}
+//                     onMouseEnter={() => setHoveredTrending('trending2')}
+//                 >
+//                     <p className='border-2 border-solid border-black px-2 py-1 rounded-full'>Press Release</p>
+//                     <div className='flex flex-col md:flex-row justify-between w-full'>
+//                         <p className='text-lg md:text-xl font-bold w-full md:w-4/5 mb-4 md:mb-0'>
+//                             Schbang, India's Largest Independent Agency, Cements Its Status as a Global Challenger...
+//                         </p>
+//                         <img
+//                             src={data.Home.trending.image2}
+//                             className='w-full h-48 object-cover rounded-lg md:hidden mb-4'
+//                             alt="trending mobile"
+//                         />
+//                         <p className='hidden md:block text-xl text-gray-600'>2 minutes</p>
+//                     </div>
+//                 </div>
+
+//                 {/* Third content block */}
+//                 <div
+//                     className={`flex w-full justify-start flex-col items-start gap-8 md:gap-16 border-b-2 pb-10 border-black ${trendingItemClass('trending3')}`}
+//                     onMouseEnter={() => setHoveredTrending('trending3')}
+//                 >
+//                     <p className='border-2 border-solid border-black px-2 py-1 rounded-full'>Press Release</p>
+//                     <div className='flex flex-col md:flex-row justify-between w-full'>
+//                         <p className='text-lg md:text-xl font-bold w-full md:w-4/5 mb-4 md:mb-0'>
+//                             Dabur Chyawanprash's 'Anti-Medicine Campaign' Returns with a Festive Twist
+//                         </p>
+//                         <img
+//                             src={data.Home.trending.image3}
+//                             className='w-full h-48 object-cover rounded-lg md:hidden mb-4'
+//                             alt="trending mobile"
+//                         />
+//                         <p className='hidden md:block text-xl text-gray-600'>2 minutes</p>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+
+//         {/* Desktop images - hidden on mobile */}
+//         <div className='hidden md:flex w-2/5 h-[300px] md:h-auto relative h-full justify-center items-center'>
+//             <img
+//                 src={data.Home.trending.image}
+//                 className={`w-3/4 rounded-lg absolute transition-opacity duration-300 ${hoveredTrending === 'trending1' ? 'opacity-100' : 'opacity-0'}`}
+//                 alt="trending"
+//             />
+//             <img
+//                 src={data.Home.trending.image2}
+//                 className={`w-3/4 rounded-lg absolute transition-opacity duration-300 ${hoveredTrending === 'trending2' ? 'opacity-100' : 'opacity-0'}`}
+//                 alt="trending"
+//             />
+//             <img
+//                 src={data.Home.trending.image3}
+//                 className={`w-3/4 rounded-lg absolute transition-opacity duration-300 ${hoveredTrending === 'trending3' ? 'opacity-100' : 'opacity-0'}`}
+//                 alt="trending"
+//             />
+//         </div>
+//     </div>
+// </section>

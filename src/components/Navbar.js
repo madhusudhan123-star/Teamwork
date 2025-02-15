@@ -22,7 +22,9 @@ const Navbar = () => {
         <nav className="bg-white py-4 font-sora relative">
             <div className="container mx-auto flex justify-between items-center px-4">
                 <div className="text-xl font-bold">
+                    <a href='/'>
                     <img src={data.navbar.logo} className='w-3/5' alt="logo" />
+                    </a>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -66,14 +68,14 @@ const Navbar = () => {
                     </div>
 
                     {/* Resources Dropdown */}
-                    <div className="relative inline-block group"
+                    {/* <div className="relative inline-block group"
                         onMouseEnter={() => setHoveredItem('resources')}>
                         <button className={navItemClass('resources') + ' flex items-center gap-2 whitespace-nowrap'}>
                             <a href={data.navbar.navbarItems.resource.bloglink}>
                                 {data.navbar.navbarItems.resource.title}
                             </a>
                         </button>
-                    </div>
+                    </div> */}
                     <div className='bg-black rounded-full '>
                         <Link
                             href={data.navbar.navbarItems.contact_link}

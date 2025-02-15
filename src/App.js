@@ -9,6 +9,8 @@ import Contact from './pages/Contact';
 import SingleBlog from './pages/SingleBlog';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import Privacy from './pages/Privacy';
+import Error from './pages/Error';
 
 function App() {
   return (
@@ -23,8 +25,10 @@ function App() {
             <Route path='/solution' element={<Solution />} />
             <Route path='/blogs' element={<Blog />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/blogs/:id' element={<SingleBlog />} />
+            {/* <Route path='/blogs/:id' element={<SingleBlog />} /> */}
             <Route path='/solutionblogs/:id' element={<SingleBlog />} />
+            <Route path='/privacy' element={<Privacy />} />
+            <Route path='*' element={<Error />} />
           </Routes>
           <Footer />
         </BrowserRouter>
