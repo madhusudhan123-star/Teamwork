@@ -313,45 +313,42 @@ const HeroSection = () => {
                         <p className='mt-4 md:mt-8 text-sm md:text-base'>{data.Home.Headersection.subtitle}</p>
                     </div>
                     {/* Horizontal animation text */}
-                    <div className='relative mt-4 md:mt-6 w-full overflow-hidden'>
-                        <div className='flex animate-[scroll_20s_linear_infinite] whitespace-nowrap'>
-                            {/* First set of items */}
-                            {Array.from({ length: animcount }).map((_, index) => (
-                                <div key={`first-${index}`} className='flex items-center shrink-0'>
-                                    <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
-                                    <h1 className="outlined-text text-3xl font-bold uppercase">{data.Home.Headersection.textrotate}</h1>
-                                    <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+                                        <div className='relative mt-4 md:mt-6 w-full overflow-hidden'>
+                                            <div className='flex animate-[scroll_5s_linear_infinite] whitespace-nowrap'>
+                                                {/* First set of items */}
+                                                {Array.from({ length: animcount }).map((_, index) => (
+                                                    <div key={`first-${index}`} className='flex items-center shrink-0'>
+                                                        <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
+                                                        <h1 className="outlined-text text-3xl font-bold uppercase">{data.Home.Headersection.textrotate}</h1>
+                                                        <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
 
-                {/* Video container */}
-                <div ref={videoParallax.ref} className='relative top-[-130px] z-10 w-screen h-screen overflow-hidden transition-transform duration-300'>
+                                    {/* Video container */}
+                <div ref={videoParallax.ref} className='relative top-[-130px] z-10 w-screen h-[50vh] md:h-screen overflow-hidden transition-transform duration-300'>
                     <video
                         src={video}
                         autoPlay
                         loop
                         muted
-                        className='absolute top-0 left-0 w-full h-full object-cover'
+                        className='absolute top-0 left-0 w-full h-full object-contain md:object-cover'
                     />
                 </div>
 
             </section>
-
-
-
             {/* Second Section */}
-            <section className='relative'>
+            <section className='relative -top-20'>
                 {/* Background_image */}
-                <div ref={background_move.ref} className='bg-white hidden 2xl:flex xl:flex md:flex sm:hidden absolute top-0 w-screen h-screen items-center justify-center'>
+                <div ref={background_move.ref} className='bg-white hidden 2xl:flex xl:flex md:flex sm:hidden absolute top-0 w-screen h-full md:h-screen items-center justify-center'>
                     <img src={data.Home.secondsec.sec_bg} className='' />
                 </div>
                 {/* main Content */}
-                <div className='z-10 relative h-screen flex flex-col md:flex-row items-center px-4 md:mx-20'>
+                <div className='z-10 relative h-full md:h-screen flex flex-col md:flex-row items-center px-4 md:mx-20'>
                     <div className='w-full md:w-3/6 flex flex-col gap-10 md:gap-28 mb-10 md:mb-0'>
-                        <h1 className='text-2xl md:text-5xl font-bold'>{data.Home.secondsec.title}</h1>
+                        <h1 className='text-4xl md:text-5xl font-bold'>{data.Home.secondsec.title}</h1>
                         <div className='h-full'>
                             <div
                                 ref={arrowRef}

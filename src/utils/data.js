@@ -21,6 +21,9 @@ import threer from '../assets/Home/threer.jpg';
 import onesli from '../assets/Home/one.jpg';
 import twosli from '../assets/Home/two.jpg';
 import threesli from '../assets/Home/three.jpg';
+import mobslideone from '../assets/Home/one.jpg';
+import mobslidetwo from '../assets/Home/two.jpg';
+import mobslidethree from '../assets/Home/three.jpg';
 import arrow from '../assets/Home/arrow.png';
 import trending from '../assets/Home/trending_img1.jpeg';
 import trending2 from '../assets/Home/trending_img2.jpeg';
@@ -149,9 +152,9 @@ const data = {
 
 
             arrow: arrow,
-            mobileImage1: onesli, // Import these new images
-            mobileImage2: twosli,
-            mobileImage3: threesli,
+            mobileImage1: mobslideone, // Import these new images
+            mobileImage2: mobslidetwo,
+            mobileImage3: mobslidethree,
         },
         services: {
             bgColors: ['#FE6427', '#FDE325', '#EFB9E2', '#01D5F2', '#43EF18'],
@@ -555,30 +558,6 @@ const data = {
                 image: office1,
                 address: "3rd Floor, Godha Horizon, Kavuri Hills, Madhapur, Hyderabad, Telangana 500081",
                 email: "info@eteamworks.com"
-            },
-            {
-                city: "Bangalore",
-                image: office2,
-                address: "42, 2nd Floor, Residency Road, Bangalore - 560025",
-                email: "bangalore@teamworksdigital.com"
-            },
-            {
-                city: "Delhi",
-                image: office3,
-                address: "Plot No. 44, Block B, Sector 27, Noida - 201301",
-                email: "delhi@teamworksdigital.com"
-            },
-            {
-                city: "London, UK",
-                image: office4,
-                address: "128 City Road, London EC1V 2NX",
-                email: "london@teamworksdigital.com"
-            },
-            {
-                city: "Press",
-                image: press,
-                address: "For Media Inquiries",
-                email: "press@teamworksdigital.com"
             }
         ],
         portfolioImages: [

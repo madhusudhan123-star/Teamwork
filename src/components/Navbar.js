@@ -10,7 +10,7 @@ const Navbar = () => {
 
 
     const navItemClass = (itemName) => `
-        text-gray-700 transition-opacity duration-300
+        text-gray-200 transition-opacity duration-300
         ${hoveredItem && hoveredItem !== itemName ? 'opacity-30' : 'opacity-100'}
     `;
 
@@ -19,9 +19,9 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-white py-4 font-sora relative">
+        <nav className="bg-black font-sora relative">
             <div className="container mx-auto flex justify-between items-center px-4">
-                <div className="text-xl font-bold">
+                <div className="text-xl font-bold text-white">
                     <a href='/'>
                     <img src={data.navbar.logo} className='w-3/5' alt="logo" />
                     </a>
@@ -32,13 +32,13 @@ const Navbar = () => {
                     className="md:hidden z-50 relative"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
-                    <div className={`w-6 h-0.5 bg-black transition-all duration-300 mb-1.5 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
-                    <div className={`w-6 h-0.5 bg-black transition-all duration-300 mb-1.5 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
-                    <div className={`w-6 h-0.5 bg-black transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
+                    <div className={`w-6 h-0.5 bg-white transition-all duration-300 mb-1.5 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
+                    <div className={`w-6 h-0.5 bg-white transition-all duration-300 mb-1.5 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
+                    <div className={`w-6 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
                 </button>
 
                 {/* Desktop Menu */}
-                <div className="space-x-12 hidden md:flex items-center"
+                <div className="space-x-12 hidden md:flex items-center text-gray-200"
                     onMouseLeave={() => setHoveredItem(null)}>
 
                     <a href={data.navbar.navbarItems.work_link}
@@ -81,22 +81,22 @@ const Navbar = () => {
                             href={data.navbar.navbarItems.contact_link}
                             rippleColor="#FFFFFF"
                             duration={1.7}
-                            className="bg-black rounded-full inline-flex items-center text-white hover:text-black transition-all"
+                            className="bg-black rounded-full inline-flex items-center transition-all"
                             style={{ borderRadius: '9999px' }} // Ensuring border-radius is always applied
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)} // Ensuring border-radius is always applied
                         >
-                            <div style={{ color: isHovered ? 'black' : 'white', }} className='whitespace-nowrap'>
+                            <div style={{ color: isHovered ? 'black' : 'white', }} className='whitespace-nowrap text-white'>
                                 {data.navbar.navbarItems.contact}
-                                <span className="ml-1">{data.navbar.navbarItems.contact_img}</span>
+                                <span className="ml-1 text-white">{data.navbar.navbarItems.contact_img}</span>
                             </div>
                         </Link>
                     </div>
                 </div>
 
                 {/* Mobile Menu Overlay */}
-                <div className={`fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
-                    <div className="pt-20 px-6 h-full overflow-y-auto">
+                <div className={`fixed inset-0 bg-black z-40 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+                    <div className="pt-20 px-6 h-full overflow-y-auto text-gray-200">
                         {/* Home Link */}
                         <a
                             href={data.navbar.navbarItems.work_link}
