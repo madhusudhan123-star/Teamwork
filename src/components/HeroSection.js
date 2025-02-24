@@ -313,21 +313,21 @@ const HeroSection = () => {
                         <p className='mt-4 md:mt-8 text-sm md:text-base'>{data.Home.Headersection.subtitle}</p>
                     </div>
                     {/* Horizontal animation text */}
-                                        <div className='relative mt-4 md:mt-6 w-full overflow-hidden'>
-                                            <div className='flex animate-[scroll_5s_linear_infinite] whitespace-nowrap'>
-                                                {/* First set of items */}
-                                                {Array.from({ length: animcount }).map((_, index) => (
-                                                    <div key={`first-${index}`} className='flex items-center shrink-0'>
-                                                        <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
-                                                        <h1 className="outlined-text text-3xl font-bold uppercase">{data.Home.Headersection.textrotate}</h1>
-                                                        <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div className='relative my-4 md:my-6 w-full overflow-hidden'>
+                        <div className='flex animate-[scroll_5s_linear_infinite] whitespace-nowrap'>
+                            {/* First set of items */}
+                            {Array.from({ length: animcount }).map((_, index) => (
+                                <div key={`first-${index}`} className='flex items-center shrink-0'>
+                                    <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
+                                    <h1 className="outlined-text text-3xl font-bold uppercase">{data.Home.Headersection.textrotate}</h1>
+                                    <img src={data.Home.Headersection.star} className='w-10 mx-2 animate-star-spin' alt="star" />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
 
-                                    {/* Video container */}
+                {/* Video container */}
                 <div ref={videoParallax.ref} className='relative top-[-130px] z-10 w-screen h-[50vh] md:h-screen overflow-hidden transition-transform duration-300'>
                     <video
                         src={video}
@@ -428,7 +428,7 @@ const HeroSection = () => {
                                 <img
                                     src={slide}
                                     alt={`Slide ${index}`}
-                                    className='w-full h-full object-cover'
+                                    className='w-full h-full'
                                 />
                             </div>
                         ))}
@@ -455,7 +455,7 @@ const HeroSection = () => {
                                 <img
                                     src={slide}
                                     alt={`Slide ${index}`}
-                                    className='w-full h-full object-cover'
+                                    className='w-full h-full'
                                 />
                             </div>
                         ))}
@@ -499,7 +499,7 @@ const HeroSection = () => {
                     {data.Home.services.content.map((service, index) => (
                         <div
                             key={index}
-                            className='w-[30vw] h-[90vh] flex flex-col items-center overflow-hidden justify-center flex-shrink-0 group transition-colors duration-500'
+                            className='w-[30vw] h-[90vh] pt-20 flex flex-col items-center overflow-hidden justify-center flex-shrink-0 group transition-colors duration-500'
                             style={{
                                 backgroundColor: `var(--bg-color-${index})`,
                                 '--bg-color-0': 'transparent',
@@ -526,8 +526,8 @@ const HeroSection = () => {
                                 <p className='px-8 text-center group-hover:text-black transition-colors duration-500'>
                                     {service.description}
                                 </p>
-                                <div className='relative overflow-hidden bg-white rounded-full h-20 w-20 flex items-center justify-center mt-8' onClick={() => handleSlideChange('next')} >
-                                    <img src={data.Home.thirdsec.arrow} className='w-full relative transition-all duration-300 ease-in-out' alt="arrow" />
+                                <div className='relative overflow-hidden rounded-full h-20 w-20 flex items-center justify-center mt-8' onClick={() => handleSlideChange('next')} >
+                                    {/* <img src={data.Home.thirdsec.arrow} className='w-full relative transition-all duration-300 ease-in-out' alt="arrow" /> */}
                                 </div>
                             </div>
                         </div>
@@ -579,7 +579,7 @@ const HeroSection = () => {
             </section>
 
             {/* New Swiper Slider Section */}
-            <section className='relative w-full h-screen'>
+            <section className='relative w-full h-[600px] md:h-[800px]'>
                 <Swiper
                     modules={[Autoplay, Navigation, Pagination]}
                     spaceBetween={0}
@@ -599,13 +599,17 @@ const HeroSection = () => {
                                 <img
                                     src={slide.image}
                                     alt={slide.title}
-                                    className='w-full h-full object-cover'
+                                    className='w-full h-full object-cover object-center'
+                                    style={{
+                                        maxHeight: '800px',
+                                        width: '100%'
+                                    }}
                                 />
-                                <div className='absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white'>
-                                    <h2 className='text-4xl md:text-6xl font-bold mb-4 text-center'>
+                                <div className='absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4 md:px-0'>
+                                    <h2 className='text-4xl md:text-6xl font-bold mb-4 text-center max-w-[800px]'>
                                         {slide.title}
                                     </h2>
-                                    <p className='text-xl md:text-2xl text-center'>
+                                    <p className='text-xl md:text-2xl text-center max-w-[600px]'>
                                         {slide.subtitle}
                                     </p>
                                 </div>
