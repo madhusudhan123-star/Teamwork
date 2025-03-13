@@ -477,126 +477,115 @@ const data = {
             }
         ],
         blogPosts: [
-            {
-            "name": "Dr. Joints",
-            "category": "Performance Marketing",
-            "objective": "Increase sales, drive brand awareness, and create a loyal customer base.",
-            "strategies": {
-                "social_media_ads": {
-                "platforms": ["Facebook", "Instagram", "Google Ads"],
-                "target_audience": ["Customers searching for joint pain relief, muscle relaxation, and Ayurvedic pain solutions"],
-                "techniques": ["AI-driven audience targeting", "Retargeting users who engaged but didn’t complete purchase"]
-                },
-                "seo_content_marketing": {
-                "tactics": ["Optimized product listings with high-ranking keywords"]
-                },
-                "whatsapp_email_marketing": {
-                "whatsapp": ["Drip campaigns with testimonials, discounts, and educational content"],
-                "email": ["Personalized follow-ups with limited-time offers"]
-                },
-                "landing_page_optimization": {
-                "changes": ["Strong CTA", "Social proof", "Money-back guarantee", "One-click checkout"]
-                }
-            },
-            "results": {
-                "sales_increase": "150% within three months",
-                "customer_acquisition_cost_reduction": "50%",
-                "repeat_customers_growth": "30%",
-                "organic_traffic_growth": "50%"
-            },
-            "image": eight,
-            "conclusion": "By leveraging performance marketing with social media ads and strategic retargeting, we positioned Dr. Joints' pain relief oil as a trusted solution."
-            },
-            {
-            "name": "Madhu Infra’s Parkville",
-            "category": "Digital Marketing",
-            "objective": "Increase brand awareness and sales for luxury apartments in Tellapur.",
-            "strategies": {
-                "social_media_ads": {
-                "platforms": ["Facebook", "Instagram", "LinkedIn"],
-                "target_audience": ["Professionals", "NRIs", "Families"],
-                "ad_types": ["Carousel ads", "Video walkthroughs", "Customer testimonials"]
-                },
-                "google_ads": {
-                "types": ["Search Ads", "Display Ads"],
-                "targeting": ["Premium home buyers actively searching"]
-                },
-                "seo": {
-                "website_optimization": ["High-intent keywords", "Google My Business optimization"],
-                "content_creation": ["Monthly blogs for engagement and traffic"]
-                },
-                "video_marketing": {
-                "types": ["Aerial drone videos", "Walkthrough videos", "Amenities showcase"],
-                "platforms": ["Social media reels", "Short videos"]
-                },
-                "whatsapp_automation": {
-                "usage": ["Instant responses", "Scheduled property visits"]
-                }
-            },
-            "image": two,
-            "results": {
-                "brand_awareness_increase": "100%",
-                "website_traffic_growth": "2X",
-                "leads_generated": "200+ within 3 months",
-                "faster_sales_conversions": "20% improvement"
-            },
-            "conclusion": "By combining targeted digital marketing, compelling visuals, and strategic lead generation, we positioned the gated community as a premium and desirable living space."
-            },
-            {
-            "name": "Mulkanoor Cooperative Society",
-            "category": "Brand Awareness",
-            "objective": "Strengthen digital presence and reach a wider audience.",
-            "strategies": {
-                "social_media_marketing": {
-                "platforms": ["Facebook", "Instagram", "LinkedIn"],
-                "content_types": ["Farmer success stories", "Financial tips"],
-                "regional_language_usage": true
-                },
-                "seo": {
-                "website_optimization": ["Relevant keywords"],
-                "content_creation": ["Blog articles on financial literacy, cooperative banking, and loan schemes"],
-                "local_seo": ["Google My Business listing"]
-                },
-                "whatsapp_sms_marketing": {
-                "whatsapp": ["Personalized messages", "Scheme updates", "Customer support"],
-                "sms": ["Banking offers", "Loan application updates"]
-                },
-                "video_marketing": {
-                "content_types": ["Farmer success stories", "Banking benefits", "Financial education"],
-                "platforms": ["Social media", "WhatsApp", "YouTube"]
-                },
-                "influencer_community_engagement": {
-                "collaborations": ["Local influencers", "Financial experts"],
-                "events": ["Live banking Q&A sessions"]
-                }
-            },
-            "image": four,
-            "conclusion": "Through social media, SEO, WhatsApp marketing, and video content, we expanded Mulkanoor Cooperative Society’s reach and strengthened engagement with rural and global audiences."
-            },
-            {
-            "name": "Aparna Constructions",
-            "category": "Real Estate Marketing",
-            "objective": "Enhance 3D walkthrough video for improved buyer engagement.",
-            "strategies": {
-                "3d_walkthrough_enhancements": {
-                "visuals": "Hyper-realistic rendering with detailed textures",
-                "camera_movements": "Cinematic transitions for a lifelike experience",
-                "lighting_effects": "Ambient lighting with dynamic shadows",
-                "interactive_elements": "Customizable interiors and furniture layouts",
-                "audio_enhancements": {
-                    "background_score": "Luxury and soothing ambiance",
-                    "voiceover": "Guided property walkthrough"
-                },
-                "multi_platform_optimization": ["Mobile", "Web", "Social media", "VR headsets"]
-                }
-            },
-            "image": one,
-            "impact": {
-                "engagement_improvement": "Significantly increased buyer interaction",
-                "decision_making_speed": "Faster property purchase decisions"
-            },
-            "conclusion": "Our enhanced 3D walkthroughs provided an immersive, detailed, and engaging experience, leading to higher conversions for Aparna Constructions."
-            }
+    {
+      "client": "Dr.Joints",
+      "image":eight,
+      "overview": `Performance marketing in sales is about maximizing efficiency and profitability by ensuring that every marketing rupee is driven to a result.
+      Dr.Joint's pain relief oil is a natural Ayurvedic solution for joint pain, muscle stiffness, and inflammation. The challenge was to position the product as a trusted pain relief solution and drive sales through targeted marketing.
+      Clients main criteria is to get leads and increase the sale conversions  ,we have designed a strategy of performance marketing,where our goal was to increase the `,  
+      "strategies": {
+        "targeted_ads": [
+          "Ran Facebook, Instagram, and Google Ads focusing on customers searching for joint pain relief, muscle relaxation, and Ayurvedic pain solutions.",
+          "Used AI-driven audience targeting to reach people suffering from arthritis, back pain, and sports injuries.",
+          "Retargeted users who engaged with the website but didn’t complete the purchase."
+        ],
+        "seo": [
+          "Optimized product listings with high-ranking keywords to improve organic reach"
+        ],
+        "whatsapp_email": [
+          "Used WhatsApp drip campaigns to send testimonials, discount offers, and educational content. Personalized email follow-ups with limited-time offers to boost conversions.",
+        ],
+        "results": [
+            "✅ 150% increase in sales within three months",
+            "✅ 50% lower customer acquisition cost (CAC) due to retargeting and referrals",
+            "✅ 30% increase in repeat customers due to customer engagement campaigns",
+            "✅ Organic traffic grew by 50%, thanks to SEO"
+        ],
+        "conclusion": "By leveraging performance marketing with a mix of social media ads and strategic retargeting, we positioned Dr.Joint's pain relief oil as a trusted solution. The result is higher sales, stronger brand recall, and a growing customer base.",
+      },
+    },
+    {
+      "client": "Madhu Infra’s Parkville",
+      "image":one,
+      "overview": "Madhu Infra’s Parkville project is a luxurious apartment in a gated community with 2 towers ,15 floors located in Tellapur . Madhu Infra was established 15 years ago but they didn’t have a digital presence.They have approached us for Digital Marketing strategies to increase their brand awareness and sales ",
+      "strategies": {
+        "social_media": [
+          "Created Facebook, Instagram, and LinkedIn ads targeting  Professionals, NRIs, and families seeking secure, luxury living.",
+          "Designed eye-catching carousel ads, video walkthroughs, and customer testimonials to showcase the community’s lifestyle.",
+          "Ran Google Search & Display Ads to capture leads actively searching for premium homes."
+        ],
+        "seo_ads": [
+          `Optimized the website with high-intent keywords like "best gated communities Apartments in Tellapur “`,
+          "Optimized Google My Business (GMB) added new images,videos to boost local search visibility.",
+          "Writing blogs on a monthly basis and increasing  the user engagement rate ,increased the website traffic"
+        ],
+        "video_marketing": [
+          "Created aerial drone videos , walkthrough videos the greenery, clubhouse, security features, and modern infrastructure.",
+          "Promoting videos of Parkville Building ,Amenities  through  reels,shorts in  Social media to increase the user engagement "
+        ],
+        "lead_nurturing": [
+          "Implemented WhatsApp automation for instant responses and scheduled property visits"
+        ]
+      },
+      "results": [
+        "✅ 100% increase in brand awareness",
+        "✅ 2X growth in website traffic",
+        "✅ 200+ high-intent leads generated within 3 months",
+        "✅ 20% faster sales conversions"
+      ],
+      "conclusion": "By combining targeted digital marketing, compelling visuals, and strategic lead generation, we positioned the gated community as a premium, secure, and desirable living space. The result is stronger branding, higher engagement, and a steady flow of quality leads."
+    },
+    {
+      "client": "Mulkanoor Cooperative Society",
+      "image":four,
+      "overview": `How We Increased Brand Awareness for Mulkanoor Cooperative Bank Through Digital Marketing
+                To strengthen Mulkanoor Cooperative Bank’s brand presence and reach a wider audience, we implemented a strategic digital marketing approach. Here’s how we effectively increased brand awareness`,
+      "strategies": {
+        "social_media": [
+          "Established a strong presence on Facebook, Instagram, and LinkedIn to engage with the target audience.",
+          "Created engaging content, including farmer success stories and financial tips. Used regional language content to connect with rural customers."
+        ],
+        "seo": [
+          "Optimized the bank’s website with relevant keywords to improve organic search rankings.",
+          "Published blog articles on financial literacy, cooperative banking benefits, and loan schemes.",
+          "Improved local SEO by listing the bank on Google My Business, helping people find branch locations easily."
+        ],
+        "whatsapp_sms": [
+          "Used WhatsApp Business to send personalized messages, updates on new schemes, and customer support.",
+          "Sent SMS alerts with banking offers, loan application updates, and awareness campaigns."
+        ],
+        "video_marketing": [
+          "Produced short videos showcasing real Farmer success stories, banking benefits, and financial education.",
+          "Created explainers on how to use digital banking services, making them accessible to rural audiences.",
+          "Shared these videos on social media, WhatsApp, and YouTube to maximize reach."
+        ],
+        "influencers": [
+          "Partnered with local influencers and financial experts to educate the community about cooperative banking.",
+          "Conducted live sessions with banking professionals to address customer queries and build trust."
+        ]
+      },
+      "conclusion": "Through a well-executed digital marketing strategy, Mulkanoor Cooperative Bank has successfully increased brand awareness and strengthened its digital presence. By leveraging social media, SEO, WhatsApp marketing, and video content, we have expanded reach and engaged diverse audiences."
+    },
+    {
+      "client": "Aparna Construction",
+      "overview": "Enhanced 3D walkthrough video project for real estate marketing. In the highly competitive real estate market, visual storytelling plays a crucial role in attracting and engaging potential buyers. At Aparna Constructions, we have taken our 3D walkthrough videos to the next level, offering an immersive and lifelike experience that helps customers visualize their dream homes like never before.",
+      "enhancements": {
+        "visuals_title": "Hyper-realistic textures and photorealistic rendering",
+        "visuals_answer": `We upgraded our 3D rendering technology to create highly detailed and photorealistic visuals. Every texture, from the smoothness of marble flooring to the warmth of wooden interiors, has been meticulously crafted to enhance the realism of our walkthroughs. This ensures that viewers get an accurate representation of what their future home will look like.`,
+        "camera_title": "Cinematic camera movements with smooth transitions",
+        "camera_answer": `Instead of static or robotic transitions, we incorporated smooth, cinematic camera movements that mimic a real-life viewing experience. Slow pans, zoom-ins on intricate design elements, and fluid walkthroughs of rooms create a more engaging and natural visual flow.`,
+        "lighting_title": "Ambient lighting with dynamic shadows",
+        "lighting_answer": `To replicate real-world lighting conditions, we integrated advanced lighting techniques that adapt to different times of the day. Natural sunlight streaming through windows, soft evening glows, and realistic dynamic shadows create a more immersive experience.`,
+        "interactivity_title": "Personalized & Interactive Elements",
+        "interactivity_answer": `We introduced customizable features where potential buyers can see different interior options, furniture layouts, and color themes. This interactivity allows customers to tailor their vision of the property, making the walkthrough more personal and engaging.`,
+        "multimedia_title": "Integrated background score and professional voiceover",
+        "multimedia_answer": "A carefully curated background score enhances the emotional appeal of the walkthrough, creating a soothing and luxurious atmosphere. Additionally, a professional voiceover guides viewers through key features, highlighting important aspects of the project, amenities, and unique selling points.",
+        "compatibility_title": " High-Resolution Output for Multiple Platforms",
+        "compatibility_answer": "Our walkthroughs are optimized for different platforms, ensuring seamless playback on mobile devices, websites, social media, and even VR headsets. This versatility allows potential buyers to explore properties anytime, anywhere.",
+      },
+      "image":two,
+      "impact": "With these upgrades, our 3D walkthroughs have significantly improved customer engagement and decision-making. Buyers can now experience Aparna Constructions' projects in a more detailed, interactive, and emotional way, leading to increased interest and faster conversions."
+    }
         ]
     },
     Contact: {

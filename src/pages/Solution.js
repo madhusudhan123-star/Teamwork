@@ -6,6 +6,21 @@ import data from '../utils/data'
 const Solution = () => {
     const { blogPosts } = data.Solutions;
 
+    // Helper function to get a short excerpt from the overview text
+    const getExcerpt = (text, maxLength = 120) => {
+        if (!text) return '';
+        return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+    };
+    
+    // Helper function to get the image from various locations in the post
+    const getImage = (post) => {
+        // Check all possible image locations
+        if (post.image) return post.image;
+        if (post.strategies && post.strategies.image) return post.strategies.image;
+        // Default image if none found
+        return 'https://via.placeholder.com/300x200?text=Case+Study';
+    };
+
     return (
         <div>
             <div className='min-h-screen py-8 md:py-12 px-4 md:px-10 flex flex-col md:flex-row gap-8'>
@@ -24,6 +39,7 @@ const Solution = () => {
                 </div>
             </div>
             <div className='px-4 md:px-10 pb-8 md:pb-12'>
+                <h2 className="text-2xl md:text-3xl font-semibold mb-8">Case Studies</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
                     {blogPosts.map((post, index) => (
                         <Link
@@ -31,16 +47,22 @@ const Solution = () => {
                             key={index}
                             state={{ blogData: post }}
                         >
-                            <div className="rounded-xl overflow-hidden">
+                            <div className="rounded-xl overflow-hidden h-full bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100">
                                 <img
                                     className="w-full h-48 object-cover"
-                                    src={post.image}
-                                    alt={post.name}
+                                    src={getImage(post)}
+                                    alt={post.client}
                                 />
-                                <div className="mt-2">
-                                    <h2 className="text-base md:text-lg">
-                                        {post.name}
+                                <div className="p-4">
+                                    <h2 className="text-xl font-semibold mb-2">
+                                        {post.client}
                                     </h2>
+                                    <p className="text-sm text-gray-600">
+                                        {post.category || "Case Study"}
+                                    </p>
+                                    <p className="mt-2 text-gray-700 text-sm">
+                                        {getExcerpt(post.overview)}
+                                    </p>
                                 </div>
                             </div>
                         </Link>
