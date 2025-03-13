@@ -568,7 +568,7 @@ const data = {
     {
       "client": "Aparna Construction",
       "overview": "Enhanced 3D walkthrough video project for real estate marketing. In the highly competitive real estate market, visual storytelling plays a crucial role in attracting and engaging potential buyers. At Aparna Constructions, we have taken our 3D walkthrough videos to the next level, offering an immersive and lifelike experience that helps customers visualize their dream homes like never before.",
-      "Enhancing the 3D Walkthrough Video for Aparna Constructions": {
+      "Enhancing": {
         "visuals_title": "Hyper-realistic textures and photorealistic rendering",
         "visuals_answer": `We upgraded our 3D rendering technology to create highly detailed and photorealistic visuals. Every texture, from the smoothness of marble flooring to the warmth of wooden interiors, has been meticulously crafted to enhance the realism of our walkthroughs. This ensures that viewers get an accurate representation of what their future home will look like.`,
         "camera_title": "Cinematic camera movements with smooth transitions",
@@ -583,7 +583,7 @@ const data = {
         "compatibility_answer": "Our walkthroughs are optimized for different platforms, ensuring seamless playback on mobile devices, websites, social media, and even VR headsets. This versatility allows potential buyers to explore properties anytime, anywhere.",
       },
       "image":two,
-      "The Impact of Enhanced 3D Walkthroughs": "With these upgrades, our 3D walkthroughs have significantly improved customer engagement and decision-making. Buyers can now experience Aparna Constructions' projects in a more detailed, interactive, and emotional way, leading to increased interest and faster conversions."
+      "impact": "With these upgrades, our 3D walkthroughs have significantly improved customer engagement and decision-making. Buyers can now experience Aparna Constructions' projects in a more detailed, interactive, and emotional way, leading to increased interest and faster conversions."
     }
         ]
     },
