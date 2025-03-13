@@ -55,7 +55,7 @@ const SingleBlog = () => {
                         <div className="mt-6">
                             <h2 className="text-2xl font-semibold mb-3 relative">
                                 <span className="relative z-10">Overview</span>
-                                <span className="absolute bottom-0 left-0 w-20 h-2 bg-yellow-200 z-0"></span>
+                                {/* <span className="absolute bottom-0 left-0 w-20 h-2 bg-yellow-200 z-0"></span> */}
                             </h2>
                             <div className="bg-gradient-to-br from-yellow-50 to-white p-6 rounded-xl shadow-sm border border-yellow-100">
                                 {typeof blogPost.overview === 'string' ? (
@@ -74,7 +74,7 @@ const SingleBlog = () => {
                         <div className="mt-12">
                             <h2 className="text-2xl font-semibold mb-6 relative">
                                 <span className="relative z-10">Strategies</span>
-                                <span className="absolute bottom-0 left-0 w-20 h-2 bg-blue-200 z-0"></span>
+                                {/* <span className="absolute bottom-0 left-0 w-20 h-2 bg-blue-200 z-0"></span> */}
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {Object.entries(blogPost.strategies).map(([key, value], index) => {
@@ -94,7 +94,7 @@ const SingleBlog = () => {
                                                 <span className={`inline-block w-8 h-8 mr-2 rounded-full bg-${color}-100 text-${color}-500 flex items-center justify-center text-sm`}>
                                                     {index + 1}
                                                 </span>
-                                                {key.replace(/_/g, ' ')}
+                                                {key.replace(/_/g, ' ').toUpperCase()}
                                             </h3>
                                             
                                             {Array.isArray(value) ? (
@@ -195,7 +195,7 @@ const SingleBlog = () => {
                         <div className="mt-8">
                             <h2 className="text-2xl font-semibold mb-3 relative">
                                 <span className="relative z-10">Results</span>
-                                <span className="absolute bottom-0 left-0 w-16 h-2 bg-green-200 z-0"></span>
+                                {/* <span className="absolute bottom-0 left-0 w-16 h-2 bg-green-200 z-0"></span> */}
                             </h2>
                             
                             {Array.isArray(blogPost.results) ? (
@@ -256,7 +256,7 @@ const SingleBlog = () => {
                         <div className="mt-12">
                             <h2 className="text-2xl font-semibold mb-3 relative">
                                 <span className="relative z-10">Conclusion</span>
-                                <span className="absolute bottom-0 left-0 w-24 h-2 bg-purple-200 z-0"></span>
+                                {/* <span className="absolute bottom-0 left-0 w-24 h-2 bg-purple-200 z-0"></span> */}
                             </h2>
                             <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-sm border border-purple-100">
                                 <p className="text-gray-700 leading-relaxed">

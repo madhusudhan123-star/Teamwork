@@ -480,16 +480,15 @@ const data = {
     {
       "client": "Dr.Joints",
       "image":eight,
-      "overview": `Performance marketing in sales is about maximizing efficiency and profitability by ensuring that every marketing rupee is driven to a result.
-      Dr.Joint's pain relief oil is a natural Ayurvedic solution for joint pain, muscle stiffness, and inflammation. The challenge was to position the product as a trusted pain relief solution and drive sales through targeted marketing.
-      Clients main criteria is to get leads and increase the sale conversions  ,we have designed a strategy of performance marketing,where our goal was to increase the `,  
+      "overview": `Performance marketing in sales is about maximizing efficiency and profitability by ensuring that every marketing rupee is driven to a result. 
+                Clients main criteria is to get leads and increase the sale conversions  ,we have designed a strategy of performance marketing,where our goal was to increase sales, drive brand awareness, and create a loyal customer base.`,  
       "strategies": {
         "targeted_ads": [
           "Ran Facebook, Instagram, and Google Ads focusing on customers searching for joint pain relief, muscle relaxation, and Ayurvedic pain solutions.",
           "Used AI-driven audience targeting to reach people suffering from arthritis, back pain, and sports injuries.",
           "Retargeted users who engaged with the website but didn’t complete the purchase."
         ],
-        "seo": [
+        "SEO": [
           "Optimized product listings with high-ranking keywords to improve organic reach"
         ],
         "whatsapp_email": [
@@ -564,7 +563,7 @@ const data = {
           "Conducted live sessions with banking professionals to address customer queries and build trust."
         ]
       },
-      "conclusion": "Through a well-executed digital marketing strategy, Mulkanoor Cooperative Bank has successfully increased brand awareness and strengthened its digital presence. By leveraging social media, SEO, WhatsApp marketing, and video content, we have expanded reach and engaged diverse audiences."
+      "conclusion": "Through a well-executed digital marketing strategy, Mulkanoor Cooperative Bank has successfully increased brand awareness and strengthened its digital presence. By leveraging social media, SEO, WhatsApp marketing, and video content, we have expanded  Mulkanoor Cooperative Society’s reach and engaged with a diverse audience, including rural communities and global audiences."
     },
     {
       "client": "Aparna Construction",
