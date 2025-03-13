@@ -39,7 +39,7 @@ const Solution = () => {
                                 />
                                 <div className="mt-2">
                                     <h2 className="text-base md:text-lg">
-                                        {post.title}
+                                        {post.name}
                                     </h2>
                                 </div>
                             </div>

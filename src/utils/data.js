@@ -478,59 +478,124 @@ const data = {
         ],
         blogPosts: [
             {
-                title: "Why is Digital Marketing",
-                content: `Imagine entering a busy marketplace where every brand is trying to grab attention, but your store has no sign or presence on the map. That's what it's like for a business without digital marketing today. In a world of smartphones and constant online activity, being offline isn't just a choice—it's a lost opportunity.
-
-                Your Customers Are Searching for You – Online!
-                Think about it. What's the first thing you do when you're looking for a product or service? You Google it! Your customers are doing the same. Whether it's hunting for the nearest coffee shop or comparing gadgets, their search starts online. If your business isn't showing up, you're invisible to a massive chunk of your audience.
-
-                More Value for Your Money
-                Unlike traditional advertising (think billboards or TV ads), digital marketing is cost-effective and measurable. Want to spend just money on a social media ad? Go ahead. Want to track how many people clicked, liked, or bought from that ad? You can. It's marketing that works smarter, not harder.`,
-                image: one,
-                date: "December 24, 2023",
+            "name": "Dr. Joints",
+            "category": "Performance Marketing",
+            "objective": "Increase sales, drive brand awareness, and create a loyal customer base.",
+            "strategies": {
+                "social_media_ads": {
+                "platforms": ["Facebook", "Instagram", "Google Ads"],
+                "target_audience": ["Customers searching for joint pain relief, muscle relaxation, and Ayurvedic pain solutions"],
+                "techniques": ["AI-driven audience targeting", "Retargeting users who engaged but didn’t complete purchase"]
+                },
+                "seo_content_marketing": {
+                "tactics": ["Optimized product listings with high-ranking keywords"]
+                },
+                "whatsapp_email_marketing": {
+                "whatsapp": ["Drip campaigns with testimonials, discounts, and educational content"],
+                "email": ["Personalized follow-ups with limited-time offers"]
+                },
+                "landing_page_optimization": {
+                "changes": ["Strong CTA", "Social proof", "Money-back guarantee", "One-click checkout"]
+                }
+            },
+            "results": {
+                "sales_increase": "150% within three months",
+                "customer_acquisition_cost_reduction": "50%",
+                "repeat_customers_growth": "30%",
+                "organic_traffic_growth": "50%"
+            },
+            "image": eight,
+            "conclusion": "By leveraging performance marketing with social media ads and strategic retargeting, we positioned Dr. Joints' pain relief oil as a trusted solution."
             },
             {
-                title: "Your Customers ",
-                content: `Think about it. What’s the first thing you do when you’re looking for a product or service? You Google it! Your customers are doing the same. Whether it’s hunting for the nearest coffee shop or comparing gadgets, their search starts online. If your business isn’t showing up, you’re invisible to a massive chunk of your audience.`,
-                image: two,
-                date: "December 24, 2023",
+            "name": "Madhu Infra’s Parkville",
+            "category": "Digital Marketing",
+            "objective": "Increase brand awareness and sales for luxury apartments in Tellapur.",
+            "strategies": {
+                "social_media_ads": {
+                "platforms": ["Facebook", "Instagram", "LinkedIn"],
+                "target_audience": ["Professionals", "NRIs", "Families"],
+                "ad_types": ["Carousel ads", "Video walkthroughs", "Customer testimonials"]
+                },
+                "google_ads": {
+                "types": ["Search Ads", "Display Ads"],
+                "targeting": ["Premium home buyers actively searching"]
+                },
+                "seo": {
+                "website_optimization": ["High-intent keywords", "Google My Business optimization"],
+                "content_creation": ["Monthly blogs for engagement and traffic"]
+                },
+                "video_marketing": {
+                "types": ["Aerial drone videos", "Walkthrough videos", "Amenities showcase"],
+                "platforms": ["Social media reels", "Short videos"]
+                },
+                "whatsapp_automation": {
+                "usage": ["Instant responses", "Scheduled property visits"]
+                }
+            },
+            "image": two,
+            "results": {
+                "brand_awareness_increase": "100%",
+                "website_traffic_growth": "2X",
+                "leads_generated": "200+ within 3 months",
+                "faster_sales_conversions": "20% improvement"
+            },
+            "conclusion": "By combining targeted digital marketing, compelling visuals, and strategic lead generation, we positioned the gated community as a premium and desirable living space."
             },
             {
-                title: "It’s the Megaphone Your Business Needs",
-                content: `Digital marketing amplifies your voice. Whether it’s through social media posts, search ads, or engaging blogs, it puts your brand in front of the right people at the right time. It’s like having a megaphone that says, “Hey, we’ve got what you need!`,
-                image: three,
-                date: "December 24, 2023",
+            "name": "Mulkanoor Cooperative Society",
+            "category": "Brand Awareness",
+            "objective": "Strengthen digital presence and reach a wider audience.",
+            "strategies": {
+                "social_media_marketing": {
+                "platforms": ["Facebook", "Instagram", "LinkedIn"],
+                "content_types": ["Farmer success stories", "Financial tips"],
+                "regional_language_usage": true
+                },
+                "seo": {
+                "website_optimization": ["Relevant keywords"],
+                "content_creation": ["Blog articles on financial literacy, cooperative banking, and loan schemes"],
+                "local_seo": ["Google My Business listing"]
+                },
+                "whatsapp_sms_marketing": {
+                "whatsapp": ["Personalized messages", "Scheme updates", "Customer support"],
+                "sms": ["Banking offers", "Loan application updates"]
+                },
+                "video_marketing": {
+                "content_types": ["Farmer success stories", "Banking benefits", "Financial education"],
+                "platforms": ["Social media", "WhatsApp", "YouTube"]
+                },
+                "influencer_community_engagement": {
+                "collaborations": ["Local influencers", "Financial experts"],
+                "events": ["Live banking Q&A sessions"]
+                }
+            },
+            "image": four,
+            "conclusion": "Through social media, SEO, WhatsApp marketing, and video content, we expanded Mulkanoor Cooperative Society’s reach and strengthened engagement with rural and global audiences."
             },
             {
-                title: "More Value for Your Money",
-                content: `Unlike traditional advertising (think billboards or TV ads), digital marketing is cost-effective and measurable. Want to spend just money on a social media ad ? Go ahead. Want to track how many people clicked, liked, or bought from that ad? You can. It’s marketing that works smarter, not harder`,
-                image: four,
-                date: "December 24, 2023",
+            "name": "Aparna Constructions",
+            "category": "Real Estate Marketing",
+            "objective": "Enhance 3D walkthrough video for improved buyer engagement.",
+            "strategies": {
+                "3d_walkthrough_enhancements": {
+                "visuals": "Hyper-realistic rendering with detailed textures",
+                "camera_movements": "Cinematic transitions for a lifelike experience",
+                "lighting_effects": "Ambient lighting with dynamic shadows",
+                "interactive_elements": "Customizable interiors and furniture layouts",
+                "audio_enhancements": {
+                    "background_score": "Luxury and soothing ambiance",
+                    "voiceover": "Guided property walkthrough"
+                },
+                "multi_platform_optimization": ["Mobile", "Web", "Social media", "VR headsets"]
+                }
             },
-            {
-                title: "Your Competitors Are Already Winning the Race",
-                content: `Here’s the harsh truth: your competitors are already online, connecting with the audience you’re trying to reach. If you’re not in the game, you’re handing them the trophy. Digital marketing helps you not only stay in the race but gives you the tools to win it.`,
-                image: five,
-                date: "December 24, 2023",
+            "image": one,
+            "impact": {
+                "engagement_improvement": "Significantly increased buyer interaction",
+                "decision_making_speed": "Faster property purchase decisions"
             },
-            {
-                title: "It’s Not Just Selling – It’s Building Relationships",
-                content: `Gone are the days of hard-sell tactics. Today’s customers want brands they can connect with. Digital marketing allows you to engage directly with your audience—replying to their comments, addressing their concerns, or simply entertaining them with a clever post. It’s about creating a bond, not just making a sale.`,
-                image: six,
-                date: "December 24, 2023",
-            },
-            {
-                title: "The Future is Digital—Are You Ready?",
-                content: `Trends like AI, voice search, and video content are changing how things work online. By starting digital marketing now, you’re getting your business ready to meet the needs of tomorrow’s tech-smart customers.`,
-                image: seven,
-                date: "December 24, 2023",
-            },
-            {
-                title: "Conclusion: Your Business Deserves to Be Seen",
-                content: `In the end, digital marketing isn’t just about being online; it’s about being present where your audience spends their time. It’s about connecting, building trust, and growing your business in a way that aligns with today’s world.
-                            So, if you're still unsure about starting, now is the time to go for it. The digital world is full of opportunities—don’t miss out on your chance to stand out`,
-                image: eight,
-                date: "December 24, 2023",
+            "conclusion": "Our enhanced 3D walkthroughs provided an immersive, detailed, and engaging experience, leading to higher conversions for Aparna Constructions."
             }
         ]
     },

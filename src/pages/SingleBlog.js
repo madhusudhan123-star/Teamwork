@@ -6,19 +6,180 @@ const SingleBlog = () => {
     const { id } = useParams();
     const location = useLocation();
     const navigate = useNavigate();
+    
+    // Determine if this is a solution blog or regular blog
+    const isSolutionBlog = location.pathname.includes('solutionblogs');
+    
+    // Get blog data from location state or fetch from data.js based on blog type
+    const blogPost = location.state?.blogData || 
+        (isSolutionBlog ? data.Solutions.blogPosts[id] : data.Blogs.blogPosts[id]);
 
-    // Get blog data from location state or fetch from data.js
-    const blogPost = location.state?.blogData || data.Blogs.blogPosts[id];
-
-    // Redirect to blogs page if no blog post is found
+    // Redirect if no blog post is found
     if (!blogPost) {
-        navigate('/blogs');
+        navigate(isSolutionBlog ? '/solution' : '/blogs');
         return null;
     }
 
+    // Handle rendering solution blog posts differently than regular blog posts
+    if (isSolutionBlog) {
+        return (
+            <div className="min-h-screen py-12">
+                <div className="mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 className="text-4xl py-5 font-bold">{blogPost.name}</h1>
+                    <div className="flex items-center py-2 text-gray-600">
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                            {blogPost.category}
+                        </span>
+                    </div>
+                    
+                    {/* Main Banner Image */}
+                    {blogPost.image && (
+                        <img
+                            src={blogPost.image}
+                            alt={blogPost.name}
+                            className="w-full h-[400px] object-cover rounded-xl my-6"
+                        />
+                    )}
+                    
+                    {/* Objective Section */}
+                    <div className="mt-6">
+                        <h2 className="text-2xl font-semibold mb-3">Objective</h2>
+                        <p className="text-gray-700 leading-relaxed">{blogPost.objective}</p>
+                    </div>
+                    
+                    {/* Enhanced Strategies Section */}
+                    {blogPost.strategies && (
+                        <div className="mt-12">
+                            <h2 className="text-2xl font-semibold mb-6 relative">
+                                <span className="relative z-10">Strategies</span>
+                                <span className="absolute bottom-0 left-0 w-20 h-2 bg-blue-200 z-0"></span>
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {Object.entries(blogPost.strategies).map(([key, value], index) => {
+                                    // Generate a color based on the strategy key
+                                    const colors = ["blue", "indigo", "purple", "green", "teal", "orange", "red"];
+                                    const colorIndex = index % colors.length;
+                                    const color = colors[colorIndex];
+                                    
+                                    return (
+                                        <div 
+                                            key={key} 
+                                            className={`bg-gradient-to-br from-${color}-50 to-white p-6 rounded-xl shadow-sm border border-${color}-100 transition-all duration-300 hover:shadow-md`}
+                                        >
+                                            <h3 className={`text-xl font-semibold capitalize mb-4 text-${color}-700 flex items-center`}>
+                                                <span className={`inline-block w-8 h-8 mr-2 rounded-full bg-${color}-100 text-${color}-500 flex items-center justify-center text-sm`}>
+                                                    {index + 1}
+                                                </span>
+                                                {key.replace(/_/g, ' ')}
+                                            </h3>
+                                            
+                                            {typeof value === 'object' ? (
+                                                <div className="space-y-4">
+                                                    {Object.entries(value).map(([subKey, subValue]) => (
+                                                        <div key={subKey} className="mb-3">
+                                                            <div className={`font-medium capitalize mb-2 text-${color}-600 border-b border-${color}-100 pb-1`}>
+                                                                {subKey.replace(/_/g, ' ')}:
+                                                            </div>
+                                                            
+                                                            {Array.isArray(subValue) ? (
+                                                                <ul className="space-y-2">
+                                                                    {subValue.map((item, i) => (
+                                                                        <li key={i} className={`flex items-start`}>
+                                                                            <span className={`inline-block w-4 h-4 mr-2 mt-1 rounded-full bg-${color}-100 flex-shrink-0`}></span>
+                                                                            <span>{item}</span>
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            ) : typeof subValue === 'object' && subValue !== null ? (
+                                                                // Handle nested objects (like audio_enhancements)
+                                                                <div className="pl-4 border-l-2 border-gray-100">
+                                                                    {Object.entries(subValue).map(([nestedKey, nestedValue]) => (
+                                                                        <div key={nestedKey} className="mb-2">
+                                                                            <span className="font-medium italic capitalize">{nestedKey.replace(/_/g, ' ')}: </span>
+                                                                            {typeof nestedValue === 'object' ? 
+                                                                                JSON.stringify(nestedValue) : 
+                                                                                <span className="text-gray-700">{nestedValue}</span>
+                                                                            }
+                                                                        </div>
+                                                                    ))}
+                                                                </div>
+                                                            ) : (
+                                                                <p className="text-gray-700">{subValue}</p>
+                                                            )}
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            ) : (
+                                                <p className="text-gray-700">{value}</p>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    )}
+                    
+                    {/* Results Section - Only if results exist */}
+                    {blogPost.results && Object.keys(blogPost.results).length > 0 && (
+                        <div className="mt-8">
+                            <h2 className="text-2xl font-semibold mb-3 relative">
+                                <span className="relative z-10">Results</span>
+                                <span className="absolute bottom-0 left-0 w-16 h-2 bg-green-200 z-0"></span>
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {Object.entries(blogPost.results).map(([key, value]) => (
+                                    <div key={key} className="bg-gradient-to-br from-green-50 to-white p-5 rounded-xl shadow-sm border border-green-100 hover:shadow-md transition-all duration-300">
+                                        <h3 className="font-medium capitalize text-green-800 mb-2">
+                                            {key.replace(/_/g, ' ')}
+                                        </h3>
+                                        <p className="font-bold text-lg text-gray-800">{value}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                    
+                    {/* Impact Section - Only if impact exists */}
+                    {blogPost.impact && Object.keys(blogPost.impact).length > 0 && (
+                        <div className="mt-8">
+                            <h2 className="text-2xl font-semibold mb-3 relative">
+                                <span className="relative z-10">Impact</span>
+                                <span className="absolute bottom-0 left-0 w-14 h-2 bg-blue-200 z-0"></span>
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {Object.entries(blogPost.impact).map(([key, value]) => (
+                                    <div key={key} className="bg-gradient-to-br from-blue-50 to-white p-5 rounded-xl shadow-sm border border-blue-100 hover:shadow-md transition-all duration-300">
+                                        <h3 className="font-medium capitalize text-blue-800 mb-2">
+                                            {key.replace(/_/g, ' ')}
+                                        </h3>
+                                        <p className="font-bold text-lg text-gray-800">{value}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                    
+                    {/* Conclusion Section - Enhanced styling */}
+                    {blogPost.conclusion && (
+                        <div className="mt-12">
+                            <h2 className="text-2xl font-semibold mb-3 relative">
+                                <span className="relative z-10">Conclusion</span>
+                                <span className="absolute bottom-0 left-0 w-24 h-2 bg-purple-200 z-0"></span>
+                            </h2>
+                            <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-sm border border-purple-100">
+                                <p className="text-gray-700 leading-relaxed">{blogPost.conclusion}</p>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+        );
+    }
+    
+    // Original rendering for regular blog posts
     return (
         <div className="min-h-screen py-12">
-            <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-4xl py-5 font-bold">{blogPost.title}</h1>
                 <div className="flex items-center py-5 text-gray-600 space-x-4">
                     <span>{blogPost.date}</span>
