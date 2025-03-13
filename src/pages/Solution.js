@@ -35,7 +35,7 @@ const Solution = () => {
                                 <img
                                     className="w-full h-48 object-cover"
                                     src={post.image}
-                                    alt={post.title}
+                                    alt={post.name}
                                 />
                                 <div className="mt-2">
                                     <h2 className="text-base md:text-lg">

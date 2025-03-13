@@ -515,7 +515,7 @@ const HeroSection = () => {
                                 e.currentTarget.style.setProperty(`--bg-color-${index}`, 'transparent');
                             }}
                         >
-                            <h1 className='text-[3vw] text-center font-bold text-gray-100 group-hover:text-white transition-colors duration-500'>
+                            <h1 className='text-[3vw] text-center font-bold text-gray-500 group-hover:text-white transition-colors duration-500'>
                                 {service.title.split(' ').map((word, i) => (
                                     <React.Fragment key={i}>
                                         {word} {i === 0 && <br />}
