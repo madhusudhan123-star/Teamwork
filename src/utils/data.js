@@ -483,15 +483,15 @@ const data = {
       "overview": `Performance marketing in sales is about maximizing efficiency and profitability by ensuring that every marketing rupee is driven to a result. 
                 Clients main criteria is to get leads and increase the sale conversions  ,we have designed a strategy of performance marketing,where our goal was to increase sales, drive brand awareness, and create a loyal customer base.`,  
       "strategies": {
-        "targeted_ads": [
+        "Targeted Social Media & Search Ads": [
           "Ran Facebook, Instagram, and Google Ads focusing on customers searching for joint pain relief, muscle relaxation, and Ayurvedic pain solutions.",
           "Used AI-driven audience targeting to reach people suffering from arthritis, back pain, and sports injuries.",
           "Retargeted users who engaged with the website but didn’t complete the purchase."
         ],
-        "SEO": [
+        "SEO & Content Marketing": [
           "Optimized product listings with high-ranking keywords to improve organic reach"
         ],
-        "whatsapp_email": [
+        "WhatsApp & Email Marketing": [
           "Used WhatsApp drip campaigns to send testimonials, discount offers, and educational content. Personalized email follow-ups with limited-time offers to boost conversions.",
         ],
         "results": [
@@ -508,21 +508,21 @@ const data = {
       "image":one,
       "overview": "Madhu Infra’s Parkville project is a luxurious apartment in a gated community with 2 towers ,15 floors located in Tellapur . Madhu Infra was established 15 years ago but they didn’t have a digital presence.They have approached us for Digital Marketing strategies to increase their brand awareness and sales ",
       "strategies": {
-        "social_media": [
+        "High-Impact Social Media Campaigns": [
           "Created Facebook, Instagram, and LinkedIn ads targeting  Professionals, NRIs, and families seeking secure, luxury living.",
           "Designed eye-catching carousel ads, video walkthroughs, and customer testimonials to showcase the community’s lifestyle.",
           "Ran Google Search & Display Ads to capture leads actively searching for premium homes."
         ],
-        "seo_ads": [
+        "SEO -Strategy": [
           `Optimized the website with high-intent keywords like "best gated communities Apartments in Tellapur “`,
           "Optimized Google My Business (GMB) added new images,videos to boost local search visibility.",
           "Writing blogs on a monthly basis and increasing  the user engagement rate ,increased the website traffic"
         ],
-        "video_marketing": [
+        "Video Marketing": [
           "Created aerial drone videos , walkthrough videos the greenery, clubhouse, security features, and modern infrastructure.",
           "Promoting videos of Parkville Building ,Amenities  through  reels,shorts in  Social media to increase the user engagement "
         ],
-        "lead_nurturing": [
+        "Lead Nurturing via WhatsApp": [
           "Implemented WhatsApp automation for instant responses and scheduled property visits"
         ]
       },
@@ -540,25 +540,25 @@ const data = {
       "overview": `How We Increased Brand Awareness for Mulkanoor Cooperative Bank Through Digital Marketing
                 To strengthen Mulkanoor Cooperative Bank’s brand presence and reach a wider audience, we implemented a strategic digital marketing approach. Here’s how we effectively increased brand awareness`,
       "strategies": {
-        "social_media": [
+        "Social Media Marketing": [
           "Established a strong presence on Facebook, Instagram, and LinkedIn to engage with the target audience.",
           "Created engaging content, including farmer success stories and financial tips. Used regional language content to connect with rural customers."
         ],
-        "seo": [
+        "Search Engine Optimization (SEO)": [
           "Optimized the bank’s website with relevant keywords to improve organic search rankings.",
           "Published blog articles on financial literacy, cooperative banking benefits, and loan schemes.",
           "Improved local SEO by listing the bank on Google My Business, helping people find branch locations easily."
         ],
-        "whatsapp_sms": [
+        "WhatsApp & SMS Marketing": [
           "Used WhatsApp Business to send personalized messages, updates on new schemes, and customer support.",
           "Sent SMS alerts with banking offers, loan application updates, and awareness campaigns."
         ],
-        "video_marketing": [
+        "Video Marketing & YouTube Campaigns": [
           "Produced short videos showcasing real Farmer success stories, banking benefits, and financial education.",
           "Created explainers on how to use digital banking services, making them accessible to rural audiences.",
           "Shared these videos on social media, WhatsApp, and YouTube to maximize reach."
         ],
-        "influencers": [
+        "Influencer & Community Engagement": [
           "Partnered with local influencers and financial experts to educate the community about cooperative banking.",
           "Conducted live sessions with banking professionals to address customer queries and build trust."
         ]
@@ -568,7 +568,7 @@ const data = {
     {
       "client": "Aparna Construction",
       "overview": "Enhanced 3D walkthrough video project for real estate marketing. In the highly competitive real estate market, visual storytelling plays a crucial role in attracting and engaging potential buyers. At Aparna Constructions, we have taken our 3D walkthrough videos to the next level, offering an immersive and lifelike experience that helps customers visualize their dream homes like never before.",
-      "enhancements": {
+      "Enhancing the 3D Walkthrough Video for Aparna Constructions": {
         "visuals_title": "Hyper-realistic textures and photorealistic rendering",
         "visuals_answer": `We upgraded our 3D rendering technology to create highly detailed and photorealistic visuals. Every texture, from the smoothness of marble flooring to the warmth of wooden interiors, has been meticulously crafted to enhance the realism of our walkthroughs. This ensures that viewers get an accurate representation of what their future home will look like.`,
         "camera_title": "Cinematic camera movements with smooth transitions",
@@ -583,7 +583,7 @@ const data = {
         "compatibility_answer": "Our walkthroughs are optimized for different platforms, ensuring seamless playback on mobile devices, websites, social media, and even VR headsets. This versatility allows potential buyers to explore properties anytime, anywhere.",
       },
       "image":two,
-      "impact": "With these upgrades, our 3D walkthroughs have significantly improved customer engagement and decision-making. Buyers can now experience Aparna Constructions' projects in a more detailed, interactive, and emotional way, leading to increased interest and faster conversions."
+      "The Impact of Enhanced 3D Walkthroughs": "With these upgrades, our 3D walkthroughs have significantly improved customer engagement and decision-making. Buyers can now experience Aparna Constructions' projects in a more detailed, interactive, and emotional way, leading to increased interest and faster conversions."
     }
         ]
     },

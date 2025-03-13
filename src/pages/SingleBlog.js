@@ -156,8 +156,8 @@ const SingleBlog = () => {
                     {blogPost.enhancements && (
                         <div className="mt-12">
                             <h2 className="text-2xl font-semibold mb-6 relative">
-                                <span className="relative z-10">Enhancements</span>
-                                <span className="absolute bottom-0 left-0 w-28 h-2 bg-blue-200 z-0"></span>
+                                <span className="relative z-10">Enhancing the 3D Walkthrough Video for Aparna Constructions</span>
+                                {/* <span className="absolute bottom-0 left-0 w-28 h-2 bg-blue-200 z-0"></span> */}
                             </h2>
                             <div className="grid grid-cols-1 gap-6">
                                 {Object.entries(blogPost.enhancements).map(([key, value], index) => {
@@ -228,8 +228,8 @@ const SingleBlog = () => {
                     {blogPost.impact && (
                         <div className="mt-8">
                             <h2 className="text-2xl font-semibold mb-3 relative">
-                                <span className="relative z-10">Impact</span>
-                                <span className="absolute bottom-0 left-0 w-14 h-2 bg-blue-200 z-0"></span>
+                                <span className="relative z-10">The Impact of Enhanced 3D Walkthroughs</span>
+                                {/* <span className="absolute bottom-0 left-0 w-14 h-2 bg-blue-200 z-0"></span> */}
                             </h2>
                             
                             {typeof blogPost.impact === 'string' ? (
