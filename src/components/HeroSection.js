@@ -9,6 +9,10 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import card1 from '../assets/Home/card1.jpg';
+import card2 from '../assets/Home/card2.jpg';
+import card3 from '../assets/Home/card3.jpg';
+import card4 from '../assets/Home/card4.jpg';
 
 const HeroSection = () => {
     const [animcount, setAnimcount] = useState(5);
@@ -286,17 +290,22 @@ const HeroSection = () => {
 
     const slides = [
         {
-            image: data.Home.slider.image1,
+            image: card1,
             title: "Creative Design Solutions",
             subtitle: "Transforming ideas into visual stories"
         },
         {
-            image: data.Home.slider.image2,
+            image: card2,
             title: "Digital Innovation",
             subtitle: "Pushing boundaries in digital space"
         },
         {
-            image: data.Home.slider.image3,
+            image: card3,
+            title: "Brand Excellence",
+            subtitle: "Creating lasting impressions"
+        },
+        {
+            image: card4,
             title: "Brand Excellence",
             subtitle: "Creating lasting impressions"
         }
@@ -599,20 +608,20 @@ const HeroSection = () => {
                                 <img
                                     src={slide.image}
                                     alt={slide.title}
-                                    className='w-full h-full object-cover object-center'
+                                    className='w-full h-full'
                                     style={{
                                         maxHeight: '800px',
                                         width: '100%'
                                     }}
                                 />
-                                <div className='absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4 md:px-0'>
+                                {/* <div className='absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4 md:px-0'>
                                     <h2 className='text-4xl md:text-6xl font-bold mb-4 text-center max-w-[800px]'>
                                         {slide.title}
                                     </h2>
                                     <p className='text-xl md:text-2xl text-center max-w-[600px]'>
                                         {slide.subtitle}
                                     </p>
-                                </div>
+                                </div> */}
                             </div>
                         </SwiperSlide>
                     ))}
