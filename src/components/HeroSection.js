@@ -588,7 +588,7 @@ const HeroSection = () => {
             </section>
 
             {/* New Swiper Slider Section */}
-            <section className='relative w-full h-[600px] md:h-[800px]'>
+            <section className='relative w-full h-full md:h-[90vh]'>
                 <Swiper
                     modules={[Autoplay, Navigation, Pagination]}
                     spaceBetween={0}
